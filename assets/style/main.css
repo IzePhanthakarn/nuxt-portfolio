@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Baloo 2';
+  font-weight: 400;
+  src: url(~assets/fonts/Baloo2-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  font-weight: 500;
+  src: url(~assets/fonts/Baloo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  font-weight: 600;
+  src: url(~assets/fonts/Baloo2-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  font-weight: 700;
+  src: url(~assets/fonts/Baloo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  font-weight: 800;
+  src: url(~assets/fonts/Baloo2-ExtraBold.ttf);
+}
+
+:root {
+  --color: #000;
+  --color-primary: #DC143C;
+  --timeline-icon:#FFF;
+  --timeline-line: #DC143C;
+  --bg: #E5E5E5;
+  --bg-secondary: #FFF;
+}
+
+.dark-mode {
+  --color: #FFF;
+  --color-primary: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
+  --timeline-icon: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
+  --timeline-line: #272727;
+  --bg: #171717;
+  --bg-secondary: #272727;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Baloo 2', cursive;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: all 0.4s;
+}
+.color-primary{
+  background: var(--color-primary);
+}
