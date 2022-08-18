@@ -30,19 +30,23 @@
 
 :root {
   --color: #000;
+  --color-logo: #000;
   --color-primary: #DC143C;
   --timeline-icon:#FFF;
   --timeline-line: #DC143C;
   --bg: #E5E5E5;
+  --bg-nav: #E5E5E5;
   --bg-secondary: #FFF;
 }
 
 .dark-mode {
   --color: #FFF;
+  --color-logo: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --color-primary: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --timeline-icon: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --timeline-line: #272727;
   --bg: #171717;
+  --bg-nav: #000;
   --bg-secondary: #272727;
 }
 * {
@@ -56,9 +60,24 @@ html {
 body {
   font-family: 'Baloo 2', cursive;
   background-color: var(--bg);
-  color: var(--color);
-  transition: all 0.4s;
+  transition: all .2s;
+  overflow-x: hidden;
 }
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
 .color-primary{
   background: var(--color-primary);
+}
+.text-default{
+  color: var(--color);
+  transition: all .2s;
 }

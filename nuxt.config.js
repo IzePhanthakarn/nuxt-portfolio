@@ -12,8 +12,13 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:'stylesheet', href:'https://unicons.iconscout.com/release/v4.0.0/css/line.css'}
+      // { rel:'stylesheet', href:'assets/style/iconscount-line.css'}
     ],
+    // css:[
+    //   '~/style/iconscount-line.css'
+    // ],
     script: [
       { src: 'js/three.min.js' },
       { src: 'js/p5.min.js' },
@@ -21,7 +26,9 @@ export default {
     ],
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/style/main.css'],
+  css: [
+    '@/assets/style/main.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
