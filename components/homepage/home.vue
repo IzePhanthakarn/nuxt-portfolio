@@ -21,7 +21,22 @@ import Vanta from 'vanta/dist/vanta.waves.min';
 // import '@nuxtjs/color-mode';
 // import * as Theme from '@nuxtjs/color-mode';
 export default {
+  data () {
+  return {
+    colors: ['system', 'light', 'dark', 'sepia'],
+    theme:""
+  }
+},
+methods: {
+
+},
   mounted() {
+    this.theme = this.$colorMode,
+    console.log(this.$colorMode)
+    console.log(this.$colorMode.$value)
+    this.theme = this.$colorMode.value,
+    console.log("theme :"+this.theme)
+    console.log("ize")
     this.vantaEffect = Vanta({
       el: '#abc', // element id or DOM object reference
       mouseControls: false,
@@ -33,14 +48,14 @@ export default {
       scaleMobile: 1.00,
       waveHeight: 10.00,
       waveSpeed: 0.60,
-      zoom: 0.65
+      zoom: 0.65,
     })
-    const colorMode = useColorMode()
-    console.log(colorMode.preference)
-    if (colorMode.value == 'light'){
-      effectHome.setOptions({ color: 0x858585 });
+    // const colorMode = this.useColorMode()
+    // console.log(colorMode.preference)
+    if (this.$colorMode.value == 'system'){
+      this.vantaEffect.setOptions({ color: 0x858585 });
     } else {
-      effectHome.setOptions({ color: 0x9 });
+      this.vantaEffect.setOptions({ color: 0x9 });
     }
 
     // if (theme === 'light'){
@@ -50,24 +65,6 @@ export default {
     //   effectHome.setOptions({ color: 0x9 });
     // }
   }
-  // async mounted() {
-  //   // window is only avaiable on browser
-  //   if (process.browser) {
-  //     window.THREE = THREE;
-  //     const { default: WAVES } = await import("vanta/dist/vanta.waves.min");
-  //     WAVES({
-  //       el: "#abc",
-  //       mmouseControls: true,
-  //       touchControls: true,
-  //       gyroControls: false,
-  //       minHeight: 200.00,
-  //       minWidth: 200.00,
-  //       scale: 1.00,
-  //       scaleMobile: 1.00,
-  //       THREE: window.THREE
-  //     });
-  //   }
-  // }
 }
 </script>
 
