@@ -13,7 +13,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:'stylesheet', href:'https://unicons.iconscout.com/release/v4.0.0/css/line.css'}
+      { rel:'stylesheet', href:'https://unicons.iconscout.com/release/v4.0.0/css/line.css'},
       // { rel:'stylesheet', href:'assets/style/iconscount-line.css'}
     ],
     // css:[
@@ -23,6 +23,7 @@ export default {
       { src: 'js/three.min.js' },
       { src: 'js/p5.min.js' },
       { src: 'js/vanta.waves.min.js' },
+      { src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12' },
     ],
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -43,7 +44,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
   ],
-
+  
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],

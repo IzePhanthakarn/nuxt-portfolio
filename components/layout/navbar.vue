@@ -14,18 +14,18 @@
 
           <!-- nuxt-link to home -->
           <li class="nav__item">
-            <a href="#home" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/" class="nav__link flex flex-col items-center">
               <i class="uil uil-estate nav__icon block lg:hidden"></i> <span
                 class="text-tiny lg:text-base font-bold">Home</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <!-- nuxt-link to about -->
           <li class="nav__item">
-            <a href="#about" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/about" class="nav__link flex flex-col items-center">
               <i class="uil uil-user nav__icon block lg:hidden"></i><span
                 class="text-tiny lg:text-base font-bold">About</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <!-- nuxt-link to experience -->
@@ -94,7 +94,7 @@ export default {
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
-
+    const nav = document.getElementById('navbar')
     /* Validate if constant exists */
     if (navToggle) {
       navToggle.addEventListener('click', () => {
@@ -109,9 +109,12 @@ export default {
         navMenu.classList.remove('show-menu')
       })
     }
-    const nav = document.getElementById('navbar')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if (this.scrollY >= 80) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
+    
+    function scrollHeader() {
+      // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+      if (this.scrollY >= 80) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
+    }
+    window.addEventListener('scroll', scrollHeader)
   },
 }
 </script>
@@ -120,6 +123,12 @@ export default {
 .navbar {
   height: 80px;
   background-color: transparent;
+  transition: all 0.3s;
+}
+
+.navbar.scroll-navbar {
+  height: 60px;
+  background-color: var(--bg-nav);
 }
 
 .dark-mode .logo {
@@ -159,7 +168,7 @@ a.nav__link:hover::after {
   width: 100%;
   background-color: var(--bg-nav);
   padding: 50px 30px 20px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 .5px 5px var(--color-shadow);
   border-radius: 0 0 1.5rem 1.5rem;
   transition: all .2s;
 }
@@ -171,7 +180,7 @@ a.nav__link:hover::after {
 
 .scroll-navbar {
   background-color: var(--bg-color);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 .5px 5px var(--color-shadow);
 }
 
 .hover-icon {

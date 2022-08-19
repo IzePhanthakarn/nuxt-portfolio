@@ -1,20 +1,10 @@
 <template>
-  <div class="h-screen w-full flex items-center" id="abc">
-    <div class="column-1 container px-3">
-      <h1 class="text-3xl font-semibold">home</h1>
-      <h1 v-if="$colorMode.preference === 'light'">light</h1>
-      <h1 v-if="$colorMode.preference === 'dark'">dark</h1>
-      <span v-if="$colorMode.preference === 'system'">(<i>{{ $colorMode.value }}</i> mode detected)</span>
-      <span v-if="$colorMode.preference === 'light'">(<i>{{ $colorMode.value }}</i> mode detected)</span>
-      <span v-if="$colorMode.preference === 'dark'">(<i>{{ $colorMode.value }}</i> mode detected)</span>
-      <h1 class="text-3xl font-semibold bg-primary">Phanthakarn</h1>
-      <i class="uil uil-estate nav__icon"></i>
-      <div @click="$colorMode.preference = 'light'">
-        <base-icon icon="sun" size="24" viewBox="0 0 24 24" v-show="$colorMode.value === 'dark'" />
-      </div>
-      <div @click="$colorMode.preference = 'dark'">
-        <base-icon icon="bolt" size="24" viewBox="0 0 24 24" v-show="$colorMode.value === 'light'" />
-      </div>
+  <div class="h-screen w-full flex items-center" id="home">
+    <div class="container px-5 text-lg text-default font-medium">
+      <h1>Hello, my name is</h1>
+      <h2 class="-my-2 text-xl font-semibold">Phanthakarn Khumphai</h2>
+      <h3>And I'm <span class="text-highlight typing"></span></h3>
+      <nuxt-link to="/about" class="text-base">About me</nuxt-link>
     </div>
   </div>
 </template>
@@ -28,7 +18,6 @@ export default {
 
   data() {
     return {
-      colors: ['system', 'light', 'dark', 'sepia'],
       theme: ""
     }
   },
@@ -42,8 +31,8 @@ export default {
     this.theme = this.$colorMode.value,
       console.log("theme :" + this.theme)
     console.log("ize")
-    this.vantaEffect = Vanta({
-      el: '#abc', // element id or DOM object reference
+    this.vantaHomeEffect = Vanta({
+      el: '#home',
       mouseControls: false,
       touchControls: false,
       gyroControls: true,
@@ -55,13 +44,19 @@ export default {
       waveSpeed: 0.60,
       zoom: 0.65,
     })
-    // const colorMode = this.useColorMode()
-    // console.log(colorMode.preference)
     if (this.$colorMode.value == 'system') {
-      this.vantaEffect.setOptions({ color: 0x858585 });
+      this.vantaHomeEffect.setOptions({ color: 0x858585 });
     } else {
-      this.vantaEffect.setOptions({ color: 0x9 });
+      this.vantaHomeEffect.setOptions({ color: 0x9 });
     }
+
+    var typed = new Typed(".typing", {
+      strings: ["Developer.", "Programmer.", "Front-end.", "Back-end.", "Gamer."],
+      typeSpeed: 100,
+      backSpeed: 60,
+      cursorChar: '|',
+      loop: true
+    });
 
     // if (theme === 'light'){
     //   effectHome.setOptions({ color: 0x858585 });
@@ -74,22 +69,4 @@ export default {
 </script>
 
 <style scoped>
-/* body {
-  background-color: #fff;
-  color: rgba(0,0,0,0.8);
-}
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-.sepia-mode body {
-  background-color: #f1e7d0;
-  color: #433422;
-} */
-.icon{
-  color: var(--color-primary);
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  transition: all .2s;
-}
 </style>

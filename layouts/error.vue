@@ -1,19 +1,22 @@
 <template>
   <div>
-    <h1>{{error.statusCode}}</h1>
+    <Navbar/>
+    <h1 class="pt-60">{{error.statusCode}}</h1>
     <h2>{{error.message}}</h2>
   </div>
 </template>
 
 <script>
+import Navbar from '../components/layout/navbar.vue';
 export default {
-    layout:'default',
+    layout: "default",
     props: {
         error: {
             type: [Object, Error],
-            default: () => {},
+            default: () => { },
         },
     },
+    components: { Navbar }
 }
 </script>
 
