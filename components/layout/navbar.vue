@@ -3,7 +3,9 @@
     <div class="container flex items-center justify-between px-5">
 
       <!-- Logo -->
-      <nuxt-link to="/" class="logo text-xl my-auto font-bold">Phanthakarn</nuxt-link>
+      <div class="title">
+        <nuxt-link to="/" class="logo text-xl my-auto font-bold">Phanthakarn</nuxt-link>
+      </div>
 
       <!-- menu list -->
       <div class="nav__menu text-default text-lg" id="nav-menu">
@@ -13,50 +15,68 @@
         <ul class="grid grid-cols-3 gap-6 sm:inline-flex sm:justify-between sm:space-x-6">
 
           <!-- nuxt-link to home -->
-          <li class="nav__item">
-            <nuxt-link to="/" class="nav__link flex flex-col items-center">
-              <i class="uil uil-estate nav__icon block lg:hidden"></i> <span
-                class="text-tiny lg:text-base font-bold">Home</span>
+          <li class="home nav__item">
+            <nuxt-link to="/" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'index' }">
+              <i class="uil uil-estate nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny text-default lg:text-base font-bold">Home</p>
+              </div>
             </nuxt-link>
           </li>
 
           <!-- nuxt-link to about -->
-          <li class="nav__item">
-            <nuxt-link to="/about" class="nav__link flex flex-col items-center">
-              <i class="uil uil-user nav__icon block lg:hidden"></i><span
-                class="text-tiny lg:text-base font-bold">About</span>
+          <li class="about nav__item">
+            <nuxt-link to="/about" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'about' }">
+              <i class="uil uil-user nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny lg:text-base font-bold">About</p>
+              </div>
             </nuxt-link>
           </li>
 
           <!-- nuxt-link to experience -->
-          <li class="nav__item">
-            <nuxt-link to="/experience" class="nav__link flex flex-col items-center">
-              <i class="uil uil-file-alt nav__icon block lg:hidden"></i><span
-                class="text-tiny lg:text-base font-bold">Experience</span>
+          <li class="experience nav__item">
+            <nuxt-link to="/experience" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'experience' }">
+              <i class="uil uil-file-alt nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny lg:text-base font-bold">Experiences</p>
+              </div>
             </nuxt-link>
           </li>
 
           <!-- nuxt-link to skill -->
-          <li class="nav__item">
-            <nuxt-link to="/skills" class="nav__link flex flex-col items-center">
-              <i class="uil uil-briefcase-alt nav__icon block lg:hidden"></i><span
-                class="text-tiny lg:text-base font-bold">Skills</span>
+          <li class="skills nav__item">
+            <nuxt-link to="/skills" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'skills' }">
+              <i class="uil uil-briefcase-alt nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny lg:text-base font-bold">Skills</p>
+              </div>
             </nuxt-link>
           </li>
 
           <!-- nuxt-link to project -->
-          <li class="nav__item">
-            <nuxt-link to="/projects" class="nav__link flex flex-col items-center">
-              <i class="uil uil-scenery nav__icon block lg:hidden"></i><span
-                class="text-tiny lg:text-base font-bold">Projects</span>
+          <li class="projects nav__item">
+            <nuxt-link to="/projects" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'projects' }">
+              <i class="uil uil-scenery nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny lg:text-base font-bold">Projects</p>
+              </div>
             </nuxt-link>
           </li>
 
           <!-- nuxt-link to contact -->
-          <li class="nav__item">
-            <nuxt-link to="/contacts" class="nav__link flex flex-col items-center">
-              <i class="uil uil-message nav__icon block lg:hidden"></i><span
-                class="text-tiny lg:text-base font-bold">Contact</span>
+          <li class="contacts nav__item">
+            <nuxt-link to="/contacts" class="nav__link flex flex-col items-center"
+              :class="{ 'text-highlight': route_name == 'contacts' }">
+              <i class="uil uil-message nav__icon block lg:hidden"></i>
+              <div class="flex justify-center items-center">
+                <p class="text-tiny lg:text-base font-bold">Contacts</p>
+              </div>
             </nuxt-link>
           </li>
         </ul>
@@ -65,22 +85,24 @@
       <div class="nav__btns inline-flex text-lg lg:text-xl items-center">
 
         <!-- change theme button -->
+        <div class="mode">
         <div @click="$colorMode.preference = 'light'" v-show="$colorMode.value === 'dark'"
-          class="icon pt-2 cursor-pointer">
+          class="text-highlight pt-2 cursor-pointer">
           <i class="uil-sun"></i>
         </div>
         <div @click="$colorMode.preference = 'dark'" v-show="$colorMode.value === 'light'"
-          class="icon pt-2 cursor-pointer">
+          class="text-highlight pt-2 cursor-pointer">
           <i class="uil-bolt"></i>
+        </div>
         </div>
 
         <!-- nuxt-link to asset -->
-        <nuxt-link to="/assets" class="ml-5 pt-1.5 cursor-pointer hidden lg:block">
+        <nuxt-link to="/assets" class="assets ml-5 pt-1.5 cursor-pointer hidden lg:block">
           <i class="uil-diary text-default hover-icon"></i>
         </nuxt-link>
 
         <!-- apps icon -->
-        <div class="nav__toggle ml-5 pt-1.5 block lg:hidden" id="nav-toggle">
+        <div class="apps nav__toggle ml-5 pt-1.5 block lg:hidden" id="nav-toggle">
           <i class="uil-apps text-default"></i>
         </div>
       </div>
@@ -123,7 +145,28 @@ export default {
       if (this.scrollY >= 80) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
     }
     window.addEventListener('scroll', scrollHeader)
+
+    const sr = ScrollReveal({
+      distance: '50px',
+      duration: 2000,
+    })
+
+    sr.reveal(`.title`, { origin: 'left', delay: 300 })
+    sr.reveal(`.home`, { origin: 'left', delay: 400 })
+    sr.reveal(`.about`, { origin: 'left', delay: 500 })
+    sr.reveal(`.experience`, { origin: 'left', delay: 600 })
+    sr.reveal(`.skills`, { origin: 'left', delay: 700 })
+    sr.reveal(`.projects`, { origin: 'left', delay: 800 })
+    sr.reveal(`.contacts`, { origin: 'left', delay: 900 })
+    sr.reveal(`.mode`, { origin: 'top', delay: 400 })
+    sr.reveal(`.assets`, { origin: 'top', delay: 500 })
+    sr.reveal(`.apps`, { origin: 'top', delay: 600 })
   },
+  computed: {
+    route_name() {
+      return this.$route.name
+    },
+  }
 }
 </script>
 
@@ -146,27 +189,22 @@ export default {
   transition: all .2s;
 }
 
-.icon {
-  background: var(--color-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all .2s;
-}
 
-a.nav__link::after {
+/* a.nav__link::after {
   content: "";
   display: block;
   bottom: 10px;
   width: 0;
-  height: 3px;
+  height: 2px;
   background: var(--color);
   transition: width 0.3s;
-}
+} */
 
-a.nav__link:hover::after {
+
+/* a.nav__link:hover::after {
   width: 100%;
   background: var(--color);
-}
+} */
 
 .nav__menu {
   position: fixed;
@@ -201,7 +239,6 @@ a.nav__link:hover::after {
   background: var(--color-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all .2s;
 }
 
 @media (min-width: 1024px) {

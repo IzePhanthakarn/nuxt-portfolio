@@ -96,9 +96,15 @@ body {
   -webkit-text-fill-color: transparent;
   transition: all .2s;
 }
+
 .text-neg{
   color: var(--color-neg);
 }
 .text-white{
   color: var(--white);
+}
+.bg-main{
+  height: calc(100vh - 112.5px);
+  color: var(--color);
+  font-size: 60px;
 }
