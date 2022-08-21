@@ -1,4 +1,13 @@
 export default {
+  mode: "static",
+  ssr: false,
+  server: {
+    port: 3000,
+    host: "0.0.0.0",
+  },
+  router: {
+    base: "/",
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Ize Phanthakarn',
@@ -14,6 +23,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:'stylesheet', href:'https://unicons.iconscout.com/release/v4.0.0/css/line.css'},
+      { rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'},
       // { rel:'stylesheet', href:'assets/style/iconscount-line.css'}
     ],
     // css:[

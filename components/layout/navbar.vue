@@ -30,34 +30,34 @@
 
           <!-- nuxt-link to experience -->
           <li class="nav__item">
-            <a href="#experience" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/experience" class="nav__link flex flex-col items-center">
               <i class="uil uil-file-alt nav__icon block lg:hidden"></i><span
                 class="text-tiny lg:text-base font-bold">Experience</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <!-- nuxt-link to skill -->
           <li class="nav__item">
-            <a href="#skills" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/skills" class="nav__link flex flex-col items-center">
               <i class="uil uil-briefcase-alt nav__icon block lg:hidden"></i><span
                 class="text-tiny lg:text-base font-bold">Skills</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <!-- nuxt-link to project -->
           <li class="nav__item">
-            <a href="#projects" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/projects" class="nav__link flex flex-col items-center">
               <i class="uil uil-scenery nav__icon block lg:hidden"></i><span
                 class="text-tiny lg:text-base font-bold">Projects</span>
-            </a>
+            </nuxt-link>
           </li>
 
           <!-- nuxt-link to contact -->
           <li class="nav__item">
-            <a href="#contacts" class="nav__link flex flex-col items-center">
+            <nuxt-link to="/contacts" class="nav__link flex flex-col items-center">
               <i class="uil uil-message nav__icon block lg:hidden"></i><span
                 class="text-tiny lg:text-base font-bold">Contact</span>
-            </a>
+            </nuxt-link>
           </li>
         </ul>
       </div>
@@ -75,9 +75,9 @@
         </div>
 
         <!-- nuxt-link to asset -->
-        <div class="ml-5 pt-1.5 cursor-pointer hidden lg:block">
+        <nuxt-link to="/assets" class="ml-5 pt-1.5 cursor-pointer hidden lg:block">
           <i class="uil-diary text-default hover-icon"></i>
-        </div>
+        </nuxt-link>
 
         <!-- apps icon -->
         <div class="nav__toggle ml-5 pt-1.5 block lg:hidden" id="nav-toggle">
@@ -95,6 +95,7 @@ export default {
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
     const nav = document.getElementById('navbar')
+    const navLink = document.querySelectorAll('.nav__link')
     /* Validate if constant exists */
     if (navToggle) {
       navToggle.addEventListener('click', () => {
@@ -109,7 +110,14 @@ export default {
         navMenu.classList.remove('show-menu')
       })
     }
-    
+
+    function linkAction() {
+      const navMenu = document.getElementById('nav-menu')
+      // When we click on each nav__link, we remove the show-menu class
+      navMenu.classList.remove('show-menu')
+    }
+    navLink.forEach(n => n.addEventListener('click', linkAction))
+
     function scrollHeader() {
       // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
       if (this.scrollY >= 80) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
@@ -170,7 +178,7 @@ a.nav__link:hover::after {
   padding: 50px 30px 20px;
   box-shadow: 0 .5px 5px var(--color-shadow);
   border-radius: 0 0 1.5rem 1.5rem;
-  transition: all .2s;
+  transition: all .3s;
 }
 
 .show-menu {

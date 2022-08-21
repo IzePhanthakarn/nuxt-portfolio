@@ -1,7 +1,7 @@
 <template>
   <div>
     <Home/>
-    <DarkTest/>
+    <!-- <DarkTest/> -->
     <About/>
     <Experience/>
     <Skill/>

@@ -11,8 +11,7 @@
 
 <script>
 import Vanta from 'vanta/dist/vanta.waves.min';
-// import '@nuxtjs/color-mode';
-// import * as Theme from '@nuxtjs/color-mode';
+
 
 export default {
 
@@ -25,30 +24,30 @@ export default {
 
   },
   mounted() {
-    this.theme = this.$colorMode,
-      console.log(this.$colorMode)
-    console.log(this.$colorMode.$value)
-    this.theme = this.$colorMode.value,
-      console.log("theme :" + this.theme)
-    console.log("ize")
-    this.vantaHomeEffect = Vanta({
-      el: '#home',
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: true,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      waveHeight: 10.00,
-      waveSpeed: 0.60,
-      zoom: 0.65,
-    })
-    if (this.$colorMode.value == 'system') {
-      this.vantaHomeEffect.setOptions({ color: 0x858585 });
-    } else {
-      this.vantaHomeEffect.setOptions({ color: 0x9 });
-    }
+    // this.theme = this.$colorMode,
+    //   console.log(this.$colorMode)
+    // console.log(this.$colorMode.$value)
+    // this.theme = this.$colorMode.value,
+    //   console.log("theme :" + this.theme)
+    // console.log("ize")
+    // this.vantaHomeEffect = Vanta({
+    //   // el: '#home',
+    //   mouseControls: false,
+    //   touchControls: false,
+    //   gyroControls: true,
+    //   minHeight: 200.00,
+    //   minWidth: 200.00,
+    //   scale: 1.00,
+    //   scaleMobile: 1.00,
+    //   waveHeight: 10.00,
+    //   waveSpeed: 0.60,
+    //   zoom: 0.65,
+    // })
+    // if (this.$colorMode.value == 'system') {
+    //   this.vantaHomeEffect.setOptions({ color: 0x858585 });
+    // } else {
+    //   this.vantaHomeEffect.setOptions({ color: 0x9 });
+    // }
 
     var typed = new Typed(".typing", {
       strings: ["Developer.", "Programmer.", "Front-end.", "Back-end.", "Gamer."],

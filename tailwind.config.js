@@ -16,11 +16,11 @@ module.exports = {
       'lg': '24px',
       'xl': '32px',
       '2xl': '36px',
-      '3xl': '',
-      '4xl': '',
-      '5xl': '',
-      '6xl': '',
-      '7xl': '',
+      '3xl': '44px',
+      '4xl': '52px',
+      '5xl': '60px',
+      '6xl': '72px',
+      '7xl': '84px',
     },
     extend: {
       ringWidth: {
