@@ -41,6 +41,7 @@
   --bg-nav: #E5E5E5;
   --bg-secondary: #FFF;
   --color-shadow: rgba(0, 0, 0, 0.25);
+  --color-shadow-m: #DC143C;
   --color-shadow-w: rgba(0, 0, 0, 0.5);
   --color-shadow-btn: rgba(0, 0, 0, 0.25);
   --color-shadow-img: rgba(0, 0, 0, 0.15);
@@ -58,6 +59,7 @@
   --bg-nav: #000;
   --bg-secondary: #272727;
   --color-shadow: #cc00cc;
+  --color-shadow-m: #cc00cc;
   --color-shadow-w:rgba(255, 255, 255, 0.5);;
   --color-shadow-btn:rgba(255, 255, 255, 0.25);;
   --color-shadow-img:rgba(255, 255, 255, 0.1);;
@@ -147,6 +149,14 @@ body {
   transition: all .2s;
 }
 
+.glass{
+background: rgba(255, 255, 255, 0.05);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: all .2s;
+}
 
 /* Animate ghost */
 @keyframes floaty {
@@ -156,5 +166,17 @@ body {
 
   100% {
     transform: translateY(15px);
+  }
+}
+
+@media (min-width:640px){
+  .head{
+    font-size: 32px;
+  }
+  .head::after{
+    font-size: 20px;
+  }
+  .head::before {
+    bottom: 16.5px;
   }
 }

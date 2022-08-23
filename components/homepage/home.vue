@@ -130,6 +130,7 @@ export default {
 .button:hover::before {
  width: 100%;
  border-radius: 20px;
+box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
 
 .button:hover {
