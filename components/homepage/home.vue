@@ -1,10 +1,37 @@
 <template>
-  <div class="h-screen w-full flex items-center" id="home">
-    <div class="container px-5 text-lg text-default font-medium">
-      <h1>Hello, my name is</h1>
-      <h2 class="-my-2 text-xl font-semibold">Phanthakarn Khumphai</h2>
-      <h3>And I'm <span class="text-highlight typing"></span></h3>
-      <nuxt-link to="/about" class="text-base">About me</nuxt-link>
+  <div class="h-screen w-full flex justify-center items-center" id="home">
+    <div class="container h-full px-5 text-lg sm:text-xl lg:text-lg xl:text-2xl text-default font-medium flex flex-col lg:flex-row justify-center lg:justify-around 2xl:justify-between lg:items-center">
+      <div class="text-content">
+        <h1>Hello, my name is</h1>
+        <h2 class="-my-2 xl:-my-4 text-xl sm:text-4xl lg:text-xl xl:text-5xl font-semibold">Phanthakarn Khumphai</h2>
+        <h3>And I'm <span class="text-highlight typing"></span><span class="text-highlight ml-px">|</span></h3>
+        <nuxt-link to="/about" class="text-base 2xl:text-lg button">About me</nuxt-link>
+      </div>
+      <div class="img-content mt-20 text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
+        <div class="text-highlight icon">
+          <div class="icon-move">
+          <i class="uil-award"></i>
+          </div>
+        </div>
+        <div class="text-highlight icon2 -top-16 right-48">
+          <i class="uil-brain"></i>
+        </div>
+        <div class="text-highlight icon right-0">
+          <i class="uil-bug"></i>
+        </div>
+        <div class="text-highlight icon2 bottom-12">
+          <i class="uil-fidget-spinner"></i>
+        </div>
+        <div class="text-highlight icon -bottom-16 left-20">
+          <i class="uil-jackhammer"></i>
+        </div>
+        <div class="text-highlight icon2 bottom-0 right-0">
+          <i class="uil-snowflake"></i>
+        </div>
+        <img src="~/static/Profile.png" alt="" class="absolute w-9/12 z-20 ml-12 mt-6 icon2">
+        <img src="~/static/blob.png" alt="" class="blob" v-show="$colorMode.value === 'light'">
+        <img src="~/static/blob-dark.png" alt="" class="blob" v-show="$colorMode.value === 'dark'">
+      </div>
     </div>
   </div>
 </template>
@@ -50,10 +77,10 @@ export default {
     // }
 
     var typed = new Typed(".typing", {
-      strings: ["Developer.", "Programmer.", "Front-end.", "Back-end.", "Gamer."],
+      strings: ["Full Stack Developer.", "UX/UI Designer.", "Programmer.", "Gamer."],
       typeSpeed: 100,
       backSpeed: 60,
-      cursorChar: '|',
+      cursorChar: '',
       loop: true
     });
 
@@ -63,9 +90,104 @@ export default {
     // else {
     //   effectHome.setOptions({ color: 0x9 });
     // }
+
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 2000,
+    })
+
+    sr.reveal(`.text-content`, { origin: 'left', delay: 600 })
+    sr.reveal(`.img-content`, { origin: 'right', delay: 800 })
   }
 }
 </script>
 
 <style scoped>
+.button {
+ cursor: pointer;
+ border: none;
+ outline: none;
+  padding: 5px 20px;
+ background: transparent;
+ color: var(--color);
+ position: relative;
+ transition: all 0.5s;
+}
+
+.button::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 3px;
+ border-radius: 2px;
+ height: 100%;
+ background: var(--first-color) ;
+ z-index: -1;
+ transition: all 0.5s;
+}
+
+.button:hover::before {
+ width: 100%;
+ border-radius: 20px;
+}
+
+.button:hover {
+ color: var(--white);
+}
+
+.button:active:before {
+ background: #b9b9b9;
+}
+
+.img-content{
+  width: 350px;
+}
+.blob {
+  -webkit-filter: drop-shadow(8px 8px 12px var(--color-shadow-w));
+  animation: floaty 2.5s infinite alternate;
+}
+.icon{
+  position: absolute;
+  animation: icon 3s infinite alternate;
+}
+/* Animate ghost */
+@keyframes icon {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.icon2{
+  position: absolute;
+  animation: icon2 3s infinite alternate;
+}
+/* Animate ghost */
+@keyframes icon2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+@media (min-width:640px){
+  .img-content{
+  width: 500px;
+}
+}
+@media (min-width:1024px){
+  .img-content{
+  width: 35%;
+}
+}
+@media (min-width:1536px){
+  .img-content{
+  width: 45%;
+}
+}
 </style>

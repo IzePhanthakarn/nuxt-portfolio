@@ -3,7 +3,7 @@
     <div class="container flex items-center justify-between px-5">
 
       <!-- Logo -->
-      <div class="title">
+      <div class="logo-nav">
         <nuxt-link to="/" class="logo text-xl my-auto font-bold">Phanthakarn</nuxt-link>
       </div>
 
@@ -15,7 +15,7 @@
         <ul class="grid grid-cols-3 gap-6 sm:inline-flex sm:justify-between sm:space-x-6">
 
           <!-- nuxt-link to home -->
-          <li class="home nav__item">
+          <li class="home nav__item" id="home">
             <nuxt-link to="/" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'index' }">
               <i class="uil uil-estate nav__icon block lg:hidden"></i>
@@ -26,7 +26,7 @@
           </li>
 
           <!-- nuxt-link to about -->
-          <li class="about nav__item">
+          <li class="about nav__item" id="about">
             <nuxt-link to="/about" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'about' }">
               <i class="uil uil-user nav__icon block lg:hidden"></i>
@@ -37,7 +37,7 @@
           </li>
 
           <!-- nuxt-link to experience -->
-          <li class="experience nav__item">
+          <li class="experience nav__item" id="experience">
             <nuxt-link to="/experience" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'experience' }">
               <i class="uil uil-file-alt nav__icon block lg:hidden"></i>
@@ -48,7 +48,7 @@
           </li>
 
           <!-- nuxt-link to skill -->
-          <li class="skills nav__item">
+          <li class="skills nav__item" id="skills">
             <nuxt-link to="/skills" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'skills' }">
               <i class="uil uil-briefcase-alt nav__icon block lg:hidden"></i>
@@ -59,7 +59,7 @@
           </li>
 
           <!-- nuxt-link to project -->
-          <li class="projects nav__item">
+          <li class="projects nav__item" id="projects">
             <nuxt-link to="/projects" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'projects' }">
               <i class="uil uil-scenery nav__icon block lg:hidden"></i>
@@ -70,7 +70,7 @@
           </li>
 
           <!-- nuxt-link to contact -->
-          <li class="contacts nav__item">
+          <li class="contacts nav__item" id="contacts">
             <nuxt-link to="/contacts" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'contacts' }">
               <i class="uil uil-message nav__icon block lg:hidden"></i>
@@ -86,14 +86,14 @@
 
         <!-- change theme button -->
         <div class="mode">
-        <div @click="$colorMode.preference = 'light'" v-show="$colorMode.value === 'dark'"
-          class="text-highlight pt-2 cursor-pointer">
-          <i class="uil-sun"></i>
-        </div>
-        <div @click="$colorMode.preference = 'dark'" v-show="$colorMode.value === 'light'"
-          class="text-highlight pt-2 cursor-pointer">
-          <i class="uil-bolt"></i>
-        </div>
+          <div @click="$colorMode.preference = 'light'" v-show="$colorMode.value === 'dark'"
+            class="text-highlight pt-2 cursor-pointer">
+            <i class="uil-sun"></i>
+          </div>
+          <div @click="$colorMode.preference = 'dark'" v-show="$colorMode.value === 'light'"
+            class="text-highlight pt-2 cursor-pointer">
+            <i class="uil-bolt"></i>
+          </div>
         </div>
 
         <!-- nuxt-link to asset -->
@@ -113,6 +113,21 @@
 <script>
 export default {
   mounted() {
+    const widthScreen = window.innerWidth;
+    const home = document.getElementById('home');
+    const about = document.getElementById('about');
+    const experience = document.getElementById('experience');
+    const skills = document.getElementById('skills');
+    const projects = document.getElementById('projects');
+    const contacts = document.getElementById('contacts');
+    if (widthScreen < 1024) {
+      home.classList.remove('home');
+      about.classList.remove('about');
+      experience.classList.remove('experience');
+      skills.classList.remove('skills');
+      projects.classList.remove('projects');
+      contacts.classList.remove('contacts');
+    }
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
@@ -151,7 +166,7 @@ export default {
       duration: 2000,
     })
 
-    sr.reveal(`.title`, { origin: 'left', delay: 300 })
+    sr.reveal(`.logo-nav`, { origin: 'left', delay: 300 })
     sr.reveal(`.home`, { origin: 'left', delay: 400 })
     sr.reveal(`.about`, { origin: 'left', delay: 500 })
     sr.reveal(`.experience`, { origin: 'left', delay: 600 })

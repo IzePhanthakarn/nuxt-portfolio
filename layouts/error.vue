@@ -64,16 +64,6 @@ img {
   animation: shadow 1.8s infinite alternate;
 }
 
-/* Animate ghost */
-@keyframes floaty {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(15px);
-  }
-}
 
 @keyframes shadow {
   0% {
