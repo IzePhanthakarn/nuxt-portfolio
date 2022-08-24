@@ -3,27 +3,27 @@
     <Home/>
     <!-- <DarkTest/> -->
     <About/>
-    <Experience/>
-    <Skill/>
-    <Project/>
-    <Service/>
-    <Testimonial/>
-    <Contact/>
+    <!-- <Experiences/> -->
+    <!-- <Skills/> -->
+    <!-- <Projects/> -->
+    <Services/>
+    <!-- <Testimonials/> -->
+    <!-- <Contacts/> -->
   </div>
 </template>
 
 <script>
 import Home from '../components/homepage/home.vue';
 import About from '../components/homepage/about.vue';
-import Experience from '../components/homepage/experience.vue';
-import Skill from '../components/homepage/skill.vue';
-import Project from '../components/homepage/project.vue';
-import Service from '../components/homepage/service.vue';
-import Testimonial from '../components/homepage/testimonial.vue';
-import Contact from '../components/homepage/contact.vue';
+import Experiences from '../components/homepage/experiences.vue';
+import Skills from '../components/homepage/skills.vue';
+import Projects from '../components/homepage/projects.vue';
+import Services from '../components/homepage/services.vue';
+import Testimonials from '../components/homepage/testimonials.vue';
+import Contacts from '../components/homepage/contacts.vue';
 import DarkTest from '../components/homepage/dark-test.vue';
 export default {
     name: "IndexPage",
-    components: { Home, About, Experience, Skill, Project, Service, Testimonial, Contact, DarkTest }
+    components: { Home, About, Experiences, Skills, Projects, Services, Testimonials, Contacts, DarkTest }
 }
 </script>
