@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center">
+  <div class="w-full flex justify-center items-center overflow-x-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">About me</h1>
@@ -23,7 +23,7 @@
                 <p class="text-sm sm:text-base lg:text-tiny font-semibold text-center leading-4 sm:leading-6 lg:leading-5">{{ exp.line1 }}<br>{{ exp.line2 }}</p>
               </div>
             </div>
-            <div class="my-5 px-2 sm:my-8 flex justify-between sm:justify-start items-center text-base font-semibold sm:space-x-10">
+            <div class="my-6 px-2 sm:my-8 flex justify-between sm:justify-start items-center text-base font-semibold sm:space-x-10">
                 <div class="button bold__btn-bg w-36 h-11 rounded-2xl">
                   <button class="button-inside font-semibold" @click="push('/resume')">Resume</button>
                 </div>
@@ -58,6 +58,14 @@ export default {
       cursorChar: '',
       loop: true
     });
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
+
+    sr.reveal(`.title`, { origin: 'top', delay: 600 })
+    sr.reveal(`.img-about`, { origin: 'left', delay: 600 })
+    sr.reveal(`.content-about`, { origin: 'right', delay: 600 })
   },
 }
 </script>

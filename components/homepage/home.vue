@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-full flex justify-center items-center" id="home">
+  <div class="h-screen w-full flex justify-center items-center overflow-hidden" id="home">
     <div class="container h-full px-5 text-lg sm:text-xl lg:text-lg xl:text-2xl text-default font-medium flex flex-col lg:flex-row justify-center lg:justify-around 2xl:justify-between lg:items-center">
       <div class="text-content">
         <h1>Hello, my name is</h1>

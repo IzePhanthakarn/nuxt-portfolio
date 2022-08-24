@@ -26,7 +26,7 @@
           </li>
 
           <!-- nuxt-link to about -->
-          <li class="about nav__item" id="about">
+          <li class="about" id="about">
             <nuxt-link to="/about" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'about' }">
               <i class="uil uil-user nav__icon block lg:hidden"></i>
@@ -37,7 +37,7 @@
           </li>
 
           <!-- nuxt-link to experience -->
-          <li class="experience nav__item" id="experience">
+          <li class="experience" id="experience">
             <nuxt-link to="/experience" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'experience' }">
               <i class="uil uil-file-alt nav__icon block lg:hidden"></i>
@@ -48,7 +48,7 @@
           </li>
 
           <!-- nuxt-link to skill -->
-          <li class="skills nav__item" id="skills">
+          <li class="skills" id="skills">
             <nuxt-link to="/skills" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'skills' }">
               <i class="uil uil-briefcase-alt nav__icon block lg:hidden"></i>
@@ -59,7 +59,7 @@
           </li>
 
           <!-- nuxt-link to project -->
-          <li class="projects nav__item" id="projects">
+          <li class="projects" id="projects">
             <nuxt-link to="/projects" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'projects' }">
               <i class="uil uil-scenery nav__icon block lg:hidden"></i>
@@ -70,7 +70,7 @@
           </li>
 
           <!-- nuxt-link to contact -->
-          <li class="contacts nav__item" id="contacts">
+          <li class="contacts" id="contacts">
             <nuxt-link to="/contacts" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'contacts' }">
               <i class="uil uil-message nav__icon block lg:hidden"></i>
@@ -102,9 +102,11 @@
         </nuxt-link>
 
         <!-- apps icon -->
+
         <div class="apps nav__toggle ml-5 pt-1.5 block lg:hidden" id="nav-toggle">
           <i class="uil-apps text-default"></i>
         </div>
+
       </div>
     </div>
   </nav>
@@ -162,7 +164,7 @@ export default {
     window.addEventListener('scroll', scrollHeader)
 
     const sr = ScrollReveal({
-      distance: '50px',
+      distance: '100px',
       duration: 2000,
     })
 
