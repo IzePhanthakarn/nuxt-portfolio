@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-hidden">
+  <div class="w-full py-3 flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">My Experiences</h1>
@@ -12,12 +12,12 @@
         v-for="(education, index) in educations" :key="index">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
-            <span class="font-semibold text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ education.year }}</span>
+            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ education.year }}</span>
           </div>
           <div class="timeline-info w-full">
-            <h1 class="text-base font-medium">{{ education.major }}</h1>
-            <h2 class="text-tiny -mt-1">- {{ education.location }}</h2>
-            <p class="my-2">{{ education.detail }}</p>
+            <h1 class="text-base xl:text-lg xl:text-xl font-medium">{{ education.major }}</h1>
+            <h2 class="text-tiny xl:text-base 2xl:text-lg xl:font-medium -mt-1">- {{ education.location }}</h2>
+            <p class="my-2 2xl:text-base">{{ education.detail }}</p>
             <span class="text-highlight text-base font-semibold">GPA : {{ education.gpa }}</span>
           </div>
         </div>
@@ -30,12 +30,12 @@
         v-for="(work, index) in works" :key="`work-${index}`">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
-            <span class="font-semibold text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ work.year }}</span>
+            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ work.year }}</span>
           </div>
           <div class="timeline-info w-full">
-            <h1 class="text-base font-medium">{{ work.job }}</h1>
-            <h2 class="text-tiny -mt-1">- {{ work.location }}</h2>
-            <p class="my-1">{{ work.detail }}</p>
+            <h1 class="text-base xl:text-lg 2xl:text-xl font-medium">{{ work.job }}</h1>
+            <h2 class="text-tiny xl:text-base 2xl:text-lg xl:font-medium -mt-1">- {{ work.location }}</h2>
+             <p class="my-1 2xl:text-base">{{ work.detail }}</p>
           </div>
         </div>
       </div>
@@ -148,6 +148,18 @@ export default {
     border: 2px solid var(--timeline-line);
     border-radius: 0 20px 20px 20px;
     box-shadow: 4px 4px 10px var(--color-shadow-img);
+  }
+}
+@media (min-width:1280px){
+  .timeline::before {
+    left: 8.2rem;
+  }
+
+  .timeline::after {
+    left: 8.88rem;
+  }
+  .timeline-info {
+    border: 3px solid var(--timeline-line);
   }
 }
 </style>
