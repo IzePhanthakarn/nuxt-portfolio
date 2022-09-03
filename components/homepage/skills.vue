@@ -4,6 +4,7 @@
       <div class="title">
         <h1 class="head mx-auto">My Skills</h1>
       </div>
+      
     </div>
   </div>
 </template>

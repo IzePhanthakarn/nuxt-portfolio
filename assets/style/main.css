@@ -35,6 +35,7 @@
   --color-logo: #000;
   --first-color: #DC143C;
   --color-primary: #DC143C;
+  --color-border: #DC143C;
   --timeline-icon:#FFF;
   --timeline-line: #DC143C;
   --bg: #E5E5E5;
@@ -53,8 +54,9 @@
   --color-logo: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --first-color:linear-gradient(45deg, #cc00cc, #33ccff);;
   --color-primary: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
+  --color-border:#FFF;
   --timeline-icon: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
-  --timeline-line: #272727;
+  --timeline-line: #cc00cc;
   --bg: #171717;
   --bg-nav: #000;
   --bg-secondary: #272727;
@@ -118,7 +120,7 @@ body {
 .head {
   position: relative;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color);
   font-size: 24px;
   padding-bottom: 20px;

@@ -3,8 +3,8 @@
     <Home/>
     <!-- <DarkTest/> -->
     <About/>
-    <!-- <Experiences/> -->
-    <!-- <Skills/> -->
+    <Experiences/>
+    <Skills/>
     <!-- <Projects/> -->
     <Services/>
     <!-- <Testimonials/> -->
