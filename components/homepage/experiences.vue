@@ -15,7 +15,7 @@
             <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ education.year }}</span>
           </div>
           <div class="timeline-info w-full">
-            <h1 class="text-base xl:text-lg xl:text-xl font-medium">{{ education.major }}</h1>
+            <h1 class="text-base xl:text-lg 2xl:text-xl font-medium">{{ education.major }}</h1>
             <h2 class="text-tiny xl:text-base 2xl:text-lg xl:font-medium -mt-1">- {{ education.location }}</h2>
             <p class="my-2 2xl:text-base">{{ education.detail }}</p>
             <span class="text-highlight text-base font-semibold">GPA : {{ education.gpa }}</span>

@@ -11,7 +11,7 @@
       </div>
       </div>
       <div class="img mt-12">
-        <img src="~/static/ghost-img.png" alt="" class="mx-auto">
+        <img src="~/static/img/home/ghost-img.png" alt="" class="mx-auto">
         <div class="shadow"></div>
       </div>
     </div>

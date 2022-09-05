@@ -28,9 +28,9 @@
         <div class="text-highlight icon2 bottom-0 right-0">
           <i class="uil-snowflake"></i>
         </div>
-        <img src="~/static/Profile.png" alt="" class="absolute w-9/12 z-20 ml-12 mt-6 icon2">
-        <img src="~/static/blob.png" alt="" class="blob" v-show="$colorMode.value === 'light'">
-        <img src="~/static/blob-dark.png" alt="" class="blob" v-show="$colorMode.value === 'dark'">
+        <img src="~/static/img/home/Profile.png" alt="" class="absolute w-9/12 z-20 ml-12 mt-6 icon2">
+        <img src="~/static/img/home/blob.png" alt="" class="blob" v-show="$colorMode.value === 'light'">
+        <img src="~/static/img/home/blob-dark.png" alt="" class="blob" v-show="$colorMode.value === 'dark'">
       </div>
     </div>
   </div>

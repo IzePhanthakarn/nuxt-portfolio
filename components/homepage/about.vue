@@ -6,7 +6,7 @@
       </div>
       <div class="w-full lg:mt-12 2xl:mt-20 flex flex-col lg:flex-row justify-center items-center">
         <div class="img-about mx-auto lg:w-4/12">
-          <img src="~/static/profileme.jpg" alt="">
+          <img src="~/static/img/me/profileme.jpg" alt="">
         </div>
         <div class="content-about lg:w-7/12">
           <div class="w-full flex flex-col text-default">
