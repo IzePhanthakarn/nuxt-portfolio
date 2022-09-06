@@ -6,8 +6,8 @@
     <!-- <Experiences/> -->
     <!-- <Skills/> -->
     <!-- <Projects/> -->
-    <Services class="py-20"/>
-    <!-- <Testimonials/> -->
+    <!-- <Services/> -->
+    <Testimonials class="pt-40"/>
     <!-- <Contacts/> -->
   </div>
 </template>
