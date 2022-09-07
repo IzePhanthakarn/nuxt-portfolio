@@ -63,9 +63,9 @@ export default {
       duration: 1500,
     })
 
-    sr.reveal(`.title`, { origin: 'top', delay: 600 })
-    sr.reveal(`.img-about`, { origin: 'left', delay: 600 })
-    sr.reveal(`.content-about`, { origin: 'right', delay: 600 })
+    sr.reveal(`.title`, { origin: 'top', delay: 200 })
+    sr.reveal(`.img-about`, { origin: 'left', delay: 300 })
+    sr.reveal(`.content-about`, { origin: 'right', delay: 400 })
   },
 }
 </script>

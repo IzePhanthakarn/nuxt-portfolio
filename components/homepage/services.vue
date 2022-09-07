@@ -6,21 +6,21 @@
       </div>
       <div
         class="service-content mt-3 sm:mt-6 lg:px-20 w-full gap-4 2xl:flex 2xl:justify-center 2xl:items-center grid grid-cols-2 md:grid-cols-3 place-items-center text-default">
-        <div class="w-full box aspect-square flex justify-center items-center">
+        <div class="service1 w-full box aspect-square flex justify-center items-center">
           <div class="content duration-300 flex flex-col justify-center items-center">
             <i class="uil-clapper-board text-5xl sm:text-8xl"></i>
             <p class="text-lg font-semibold">Front-end</p>
             <p class="text-base -mt-2">Nuxt.js</p>
           </div>
         </div>
-        <div class="w-full box aspect-square flex justify-center items-center">
+        <div class="service2 w-full box aspect-square flex justify-center items-center">
           <div class="content duration-300 flex flex-col justify-center items-center">
             <i class="uil-processor text-5xl sm:text-8xl"></i>
             <p class="text-lg font-semibold">Back-end</p>
             <p class="text-base -mt-2">Golang</p>
           </div>
         </div>
-        <div class="box rectang flex justify-center items-center col-span-2 md:col-span-1">
+        <div class="service3 box rectang flex justify-center items-center col-span-2 md:col-span-1">
           <div class="content duration-300 flex md:flex-col justify-center items-center">
             <i class="uil-cloud-share text-7xl sm:text-8xl"></i>
             <div class="flex flex-col items-center justify-center">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="contact container mt-8 flex flex-col sm:flex-row sm:rounded-3xl">
+    <div class="contact-con container mt-8 flex flex-col sm:flex-row sm:rounded-3xl">
       <div class="w-full sm:w-8/12 text-content px-6 pt-6 font-medium">
         <h1 class="text-lg">You want to have a website ?</h1>
         <h2 class="text-tiny mb-3">If this is your first project contact me and get 30% discount on your new project.
@@ -47,7 +47,17 @@
 
 <script>
 export default {
+  mounted() {
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
 
+    sr.reveal(`.service1`, { origin: 'left', delay: 300 })
+    sr.reveal(`.service2`, { origin: 'left', delay: 400 })
+    sr.reveal(`.service3`, { origin: 'left', delay: 500 })
+    sr.reveal(`.contact-con`, { origin: 'right', delay: 600 })
+  }
 }
 </script>
 
@@ -81,7 +91,7 @@ i::before {
   aspect-ratio: 2/1;
 }
 
-.contact {
+.contact-con {
   background: var(--bg-secondary);
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
@@ -102,18 +112,18 @@ i::before {
 }
 
 @media (min-width: 1024px) {
-  .contact{
+  .contact-con{
     max-width: 824px;
   }
 }
 @media(min-width:1280px){
-.contact{
+.contact-con{
   max-width: 1030px;
 }
 }
 
 @media(min-width:1536px){
-  .contact{
+  .contact-con{
     max-width: 940px;
   }
 }

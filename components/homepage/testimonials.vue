@@ -4,9 +4,9 @@
       <div class="title">
         <h1 class="head mx-auto">Testimonial</h1>
       </div>
-      <hooper :settings="hooperSettings" class="flex justify-center items-center my-2">
+      <hooper :settings="hooperSettings" class="hooperr flex justify-center items-center my-2">
         <slide v-for="(testimonial, index) in testimonials" :key="index" class="h-full">
-          <div class="py-4 h-full">
+          <div class="slides py-4 h-full">
             <div class="bg-content w-11/12 h-full mx-auto p-4 rounded-xl text-default flex flex-col items-start">
               <div class="profile">
                 <div class="flex">

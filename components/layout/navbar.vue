@@ -165,19 +165,19 @@ export default {
 
     const sr = ScrollReveal({
       distance: '100px',
-      duration: 2000,
+      duration: 1500,
     })
 
-    sr.reveal(`.logo-nav`, { origin: 'left', delay: 300 })
-    sr.reveal(`.home`, { origin: 'left', delay: 400 })
-    sr.reveal(`.about`, { origin: 'left', delay: 500 })
-    sr.reveal(`.experience`, { origin: 'left', delay: 600 })
-    sr.reveal(`.skills`, { origin: 'left', delay: 700 })
-    sr.reveal(`.projects`, { origin: 'left', delay: 800 })
-    sr.reveal(`.contacts`, { origin: 'left', delay: 900 })
-    sr.reveal(`.mode`, { origin: 'top', delay: 400 })
-    sr.reveal(`.assets`, { origin: 'top', delay: 500 })
-    sr.reveal(`.apps`, { origin: 'top', delay: 600 })
+    sr.reveal(`.logo-nav`, { origin: 'left', delay: 100 })
+    sr.reveal(`.home`, { origin: 'left', delay: 300 })
+    sr.reveal(`.about`, { origin: 'left', delay: 400 })
+    sr.reveal(`.experience`, { origin: 'left', delay: 500 })
+    sr.reveal(`.skills`, { origin: 'left', delay: 600 })
+    sr.reveal(`.projects`, { origin: 'left', delay: 700 })
+    sr.reveal(`.contacts`, { origin: 'left', delay: 800 })
+    sr.reveal(`.mode`, { origin: 'top', delay: 300 })
+    sr.reveal(`.assets`, { origin: 'top', delay: 400 })
+    sr.reveal(`.apps`, { origin: 'top', delay: 500 })
   },
   computed: {
     route_name() {

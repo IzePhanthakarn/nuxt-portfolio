@@ -4,11 +4,10 @@
       <div class="title">
         <h1 class="head mx-auto">My Projects</h1>
       </div>
-      <hooper :settings="hooperSettings" class="flex justify-center items-center my-2">
+      <hooper :settings="hooperSettings" class="hooperr flex justify-center items-center my-2">
         <slide v-for="(project,index) in projects" :key="index">
-          <div class="py-4 h-full">
+          <div class="slides py-4 h-full">
             <div class="bg-content w-5/6 h-full mx-auto p-4 rounded-xl text-default flex flex-col items-start">
-              <!-- <div class="img-content w-full h-48 bg-red-200"></div> -->
               <img class="rounded-2xl" :src="require(`~/static/img/projects${project.img}`)" />
               <h1 class="text-highlight font-semibold mt-4">{{project.type}}</h1>
               <h2 class="text-base font-semibold">{{project.name}}</h2>
@@ -64,7 +63,17 @@ export default {
         {id:1,type:"Website",name:"Portfolio Website",img:"/mainport.png",detail:"This website is the website you are watching now. It started making in August 2022 and update until now. It made by Nuxt.js framework."}
       ]
     };
-  }
+  },
+  mounted() {
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
+
+    sr.reveal(`.hooperr`, { origin: 'top', delay: 300 })
+    sr.reveal(`.slides`, { origin: 'left', delay: 500 })
+
+  },
 }
 </script>
 

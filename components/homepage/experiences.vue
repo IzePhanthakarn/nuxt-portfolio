@@ -4,11 +4,11 @@
       <div class="title">
         <h1 class="head mx-auto">My Experiences</h1>
       </div>
-      <div class="text-default w-full -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
+      <div class="subheader text-default w-full -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
         <i class="uil uil-graduation-cap text-highlight text-4xl font-bold"></i>
         <h1>Education</h1>
       </div>
-      <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative text-default"
+      <div class="pagetimeline w-full timeline pl-10 sm:pl-0 flex flex-col relative text-default"
         v-for="(education, index) in educations" :key="index">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
@@ -22,11 +22,11 @@
           </div>
         </div>
       </div>
-      <div class="text-default w-full mt-4 -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
+      <div class="subheader text-default w-full mt-4 -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
         <i class="uil uil-briefcase-alt text-highlight text-4xl font-bold"></i>
         <h1>Work</h1>
       </div>
-      <div class="w-full timeline pl-10 sm:pl-0 flex flex-col relative text-default"
+      <div class="pagetimeline w-full timeline pl-10 sm:pl-0 flex flex-col relative text-default"
         v-for="(work, index) in works" :key="`work-${index}`">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
@@ -55,6 +55,15 @@ export default {
         { id: "1", job: "Full Stack Developer", location: "AI Technovation Co.,Ltd.", year: "2022 - now", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam."}
       ]
     }
+  },
+  mounted() {
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
+
+    sr.reveal(`.subheader`, { origin: 'top', delay: 300 })
+    sr.reveal(`.pagetimeline`, { origin: 'right', delay: 400 })
   },
 }
 </script>

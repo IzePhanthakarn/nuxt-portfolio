@@ -1,8 +1,69 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-x-hidden">
+  <div class="w-full flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">Contact me</h1>
+      </div>
+      <div class="w-full text-default lg:flex lg:space-x-12">
+        <!-- Contact info -->
+        <div class="w-full mt-4">
+          <h1 class="subheader text-base font-semibold">Get in touch</h1>
+          <p class="con-detail font-medium">You can contact me in many ways, e-mail, linkedin or facebook. If you want
+            to contact
+            me urgently I
+            recommend you to contact me via phone number.</p>
+          <div class="lg:space-y-0.5 lg:mt-4">
+            <div class="con-email flex">
+              <i class="uil uil-envelope text-highlight text-5xl mr-4"></i>
+              <div class="flex flex-col justify-center items-start -mt-2">
+                <h1 class="text-highlight text-base font-semibold">Email</h1>
+                <h1 class="text-tiny font-medium">khumphai_ph@hotmail.com</h1>
+              </div>
+            </div>
+            <div class="con-phone flex -mt-3">
+              <i class="uil uil-phone text-highlight text-5xl mr-4"></i>
+              <div class="flex flex-col justify-center items-start -mt-2">
+                <h1 class="text-highlight text-base font-semibold">Phone</h1>
+                <h1 class="text-tiny font-medium">+66 98 340 5579</h1>
+              </div>
+            </div>
+            <div class="con-linked flex -mt-3">
+              <i class="uil uil-linkedin text-highlight text-5xl mr-4"></i>
+              <div class="flex flex-col justify-center items-start -mt-2">
+                <h1 class="text-highlight text-base font-semibold">LinkedIn</h1>
+                <h1 class="text-tiny font-medium">Phanthakarn Khumphai</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="lg:w-full lg:mt-4">
+          <h1 class="subheader text-base font-semibold mb-4 lg:mb-1">Message me</h1>
+          <form class="w-full" @submit.prevent="send">
+            <div class="sm:flex sm:space-x-4">
+              <div class="con-input1 sm:w-full">
+                <label class="font-medium ml-2" for="name">Name</label>
+                <input id="name" type="text" v-model="name" required />
+              </div>
+              <div class="con-input2 sm:w-full">
+                <label class="font-medium ml-2" for="email">Email</label>
+                <input id="email" type="email" v-model="email" required />
+              </div>
+            </div>
+            <div class="con-input3">
+              <label class="font-medium ml-2" for="subject">Subject</label>
+              <input id="subject" type="text" v-model="subject" required />
+            </div>
+            <div class="con-input4">
+              <label class="font-medium ml-2" for="message">Message</label>
+              <textarea id="message" v-model="message" required />
+            </div>
+            <button type="submit">
+              Send email
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -10,13 +71,78 @@
 
 <script>
 export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: '',
+      subject: '',
+    }
 
+  },
+  methods: {
+    send() {
+      this.$mail.send({
+        from: this.email,
+        subject: 'Contact form message',
+        text: 'Hi my name is' + this.name + this.message,
+      })
+      this.name = ""
+      this.email = ""
+      this.subject = ""
+      this.message = ""
+    }
+  },
+  mounted() {
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
+
+    sr.reveal(`.con-detail`, { origin: 'left', delay: 300 })
+    sr.reveal(`.con-email`, { origin: 'left', delay: 400 })
+    sr.reveal(`.con-phone`, { origin: 'left', delay: 500 })
+    sr.reveal(`.con-linked`, { origin: 'left', delay: 600 })
+    sr.reveal(`.con-input1`, { origin: 'left', delay: 300 })
+    sr.reveal(`.con-input2`, { origin: 'right', delay: 400 })
+    sr.reveal(`.con-input3`, { origin: 'left', delay: 500 })
+    sr.reveal(`.con-input4`, { origin: 'right', delay: 600 })
+  }
 }
 </script>
 
 <style scoped>
 .head::after {
-  content: "who I am";
+  content: "get in touch";
 }
 
+input,
+textarea {
+  background: var(--bg-secondary);
+  box-shadow: 2px 2px 6px var(--color-shadow);
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+  transition: all .1s;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+/* input:hover,textarea:hover{
+  border: 1px solid #aaa;
+} */
+input:focus,
+textarea:focus {
+  outline: solid 2px var(--color-shadow-m);
+}
+
+input {
+  height: 40px;
+}
+
+textarea {
+  height: 60px;
+  resize: none;
+}
 </style>

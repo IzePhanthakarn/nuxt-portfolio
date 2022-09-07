@@ -6,7 +6,7 @@
       </div>
       <div class="w-full grid grid-cols-1 sm:grid-cols-2 sm:gap-x-6 text-default">
         <div class="flex flex-col">
-          <div class="skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
+          <div class="leftcard skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
             <header class="skills__header flex justify-between items-center px-4 py-2 cursor-pointer">
               <div class="skills_subheader">
                 <i class="uil uil-desktop-cloud-alt skills__icon text-4xl xl:text-5xl mx-2 lg:mx-8 text-highlight"></i>
@@ -29,7 +29,7 @@
             </div>
           </div>
 
-          <div class="skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
+          <div class="rightcard skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
             <header class="skills__header flex justify-between items-center px-4 py-2 cursor-pointer">
               <div class="skills_subheader">
                 <i class="uil uil-arrow skills__icon text-4xl xl:text-5xl mx-2 lg:mx-8 text-highlight"></i>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="flex flex-col">
-          <div class="skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
+          <div class="leftcard skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
             <header class="skills__header flex justify-between items-center px-4 py-2 cursor-pointer">
               <div class="skills_subheader">
                 <i class="uil uil-swatchbook skills__icon text-4xl xl:text-5xl mx-2 lg:mx-8 text-highlight"></i>
@@ -78,7 +78,7 @@
             </div>
 
           </div>
-          <div class="skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
+          <div class="rightcard skills__cards w-full my-2.5 sm:my-3.5 rounded-2xl">
             <header class="skills__header flex justify-between items-center px-4 py-2 cursor-pointer">
               <div class="skills_subheader">
                 <i class="uil uil-brain skills__icon text-4xl xl:text-5xl mx-2 lg:mx-8 text-highlight"></i>
@@ -168,7 +168,13 @@ export default {
         skill.classList.add('rotate');
       }
     }
+    const sr = ScrollReveal({
+      distance: '100px',
+      duration: 1500,
+    })
 
+    sr.reveal(`.leftcard`, { origin: 'left', delay: 300 })
+    sr.reveal(`.rightcard`, { origin: 'right', delay: 400 })
 
   },
 }

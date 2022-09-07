@@ -1,14 +1,14 @@
 <template>
   <div>
-    <!-- <Home/> -->
+    <Home/>
     <!-- <DarkTest/> -->
-    <!-- <About/> -->
-    <!-- <Experiences/> -->
-    <!-- <Skills/> -->
-    <!-- <Projects/> -->
-    <!-- <Services/> -->
-    <Testimonials class="pt-40"/>
-    <!-- <Contacts/> -->
+    <About/>
+    <Experiences/>
+    <Skills/>
+    <Projects/>
+    <Services/>
+    <Testimonials/>
+    <Contacts/>
   </div>
 </template>
 

@@ -54,6 +54,20 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'izephanthakarn@hotmail.com',
+      },
+      smtp: {
+        host: 'smtp.mailtrap.io',
+        port: 2525,
+        auth: {
+          user: '9216fd2614d73c',
+          pass: '12ab1b869877af'
+        },
+      },
+    }],
   ],
   
   // Modules: https://go.nuxtjs.dev/config-modules
