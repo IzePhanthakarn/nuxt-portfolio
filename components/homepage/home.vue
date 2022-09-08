@@ -10,18 +10,22 @@
       </div>
       <div
         class="icon-follow flex justify-center space-x-6 text-3xl absolute hidden sm:block sm:space-x-0 sm:bottom-52 sm:right-10 lg:bottom-20 lg:left-20 lg:flex lg:space-x-6 lg:justify-start">
-        <div class="fb-icon">
+        <div class="fb-icon tooltip">
           <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
             class="fab fa-facebook-square hover-icon"></a>
+            <span class="tooltiptext">Facebook</span>
         </div>
-        <div class="ig-icon">
+        <div class="ig-icon tooltip">
           <a href="https://www.instagram.com/jjaoizee/" target="_blank" class="fab fa-instagram-square hover-icon"></a>
+          <span class="tooltiptext">Instagram</span>
         </div>
-        <div class="gh-icon">
+        <div class="gh-icon tooltip">
           <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-github-square hover-icon"></a>
+          <span class="tooltiptext">Github</span>
         </div>
-        <div class="line-icon">
+        <div class="line-icon tooltip">
           <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-line hover-icon"></a>
+          <span class="tooltiptext">Line</span>
         </div>
       </div>
       <div class="img-content mt-20 text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
