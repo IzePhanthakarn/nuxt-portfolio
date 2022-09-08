@@ -38,7 +38,7 @@
 
           <!-- nuxt-link to experience -->
           <li class="experience" id="experience">
-            <nuxt-link to="/experience" class="nav__link flex flex-col items-center"
+            <nuxt-link to="/experiences" class="nav__link flex flex-col items-center"
               :class="{ 'text-highlight': route_name == 'experiences' }">
               <i class="uil uil-file-alt nav__icon block lg:hidden"></i>
               <div class="flex justify-center items-center">

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-hidden">
+  <div class="w-full py-3 flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">Testimonial</h1>
@@ -16,7 +16,6 @@
                     <h2 class="text-tiny -mt-1 font-medium">{{ testimonial.relation }}</h2>
                   </div>
                 </div>
-                <!-- <div class="star">star</div> -->
               </div>
               <div class="text-content mt-2 truncated-lines">{{ testimonial.detail }}</div>
             </div>

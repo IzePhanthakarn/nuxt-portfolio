@@ -8,11 +8,21 @@
         <h3>And I'm <span class="text-highlight typing"></span><span class="text-highlight ml-px">|</span></h3>
         <nuxt-link to="/about" class="text-base 2xl:text-lg button">About me</nuxt-link>
       </div>
-      <div class="icon-follow flex justify-center space-x-6 text-3xl absolute bottom-20 left-20">
-        <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
-          class="fab fa-facebook-square hover-icon"></a>
-        <a href="https://www.instagram.com/jjaoizee/" target="_blank" class="fab fa-instagram-square hover-icon"></a>
-        <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-github-square hover-icon"></a>
+      <div
+        class="icon-follow flex justify-center space-x-6 text-3xl absolute hidden sm:block sm:space-x-0 sm:bottom-52 sm:right-10 lg:bottom-20 lg:left-20 lg:flex lg:space-x-6 lg:justify-start">
+        <div class="fb-icon">
+          <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
+            class="fab fa-facebook-square hover-icon"></a>
+        </div>
+        <div class="ig-icon">
+          <a href="https://www.instagram.com/jjaoizee/" target="_blank" class="fab fa-instagram-square hover-icon"></a>
+        </div>
+        <div class="gh-icon">
+          <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-github-square hover-icon"></a>
+        </div>
+        <div class="line-icon">
+          <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-line hover-icon"></a>
+        </div>
       </div>
       <div class="img-content mt-20 text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
         <div class="text-highlight icon">
@@ -105,6 +115,11 @@ export default {
 
     sr.reveal(`.text-content`, { origin: 'left', delay: 100 })
     sr.reveal(`.img-content`, { origin: 'right', delay: 200 })
+    sr.reveal(`.fb-icon`, { origin: 'right', delay: 200 })
+    sr.reveal(`.pos-bar`, { origin: 'right', delay: 200 })
+    sr.reveal(`.ig-icon`, { origin: 'right', delay: 300 })
+    sr.reveal(`.gh-icon`, { origin: 'right', delay: 400 })
+    sr.reveal(`.line-icon`, { origin: 'right', delay: 500 })
   }
 }
 </script>
@@ -178,11 +193,12 @@ export default {
   animation: icon2 3s infinite alternate;
 }
 
-.icon-follow a{
+.icon-follow a {
   color: #FFF;
   transition: .3s;
 }
-.icon-follow a:hover{
+
+.icon-follow a:hover {
   color: var(--color-primary);
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-hidden">
+  <div class="w-full py-3 flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">My Projects</h1>

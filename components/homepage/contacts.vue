@@ -59,9 +59,19 @@
               <label class="font-medium ml-2" for="message">Message</label>
               <textarea id="message" v-model="message" required />
             </div>
-            <button type="submit">
+            <div class="button-bg">
+              <button type="submit">
+                <div class="i-animation">
+                  <i class="fas fa-paper-plane"></i>
+                </div>
+                <span>
+                  Send
+                </span>
+              </button>
+            </div>
+            <!-- <button type="submit">
               Send email
-            </button>
+            </button> -->
           </form>
         </div>
       </div>
@@ -144,5 +154,53 @@ input {
 textarea {
   height: 60px;
   resize: none;
+}
+.button-bg {
+  width: 90px;
+  padding: 3px 0;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background: var(--first-color);
+}
+
+.button-bg button {
+  width: 84px;
+  /* margin-bottom: 3px; */
+  border-radius: 10px;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.button-bg button span {
+  display: block;
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+
+.button-bg button i {
+  transform-origin: center center;
+  margin-right: 0.4rem;
+  transition: 0.3s;
+}
+
+.button-bg button:hover .i-animation {
+  animation: fly-1 0.3s;
+}
+
+.button-bg button:hover i {
+  transform: translateX(20px) rotate(45deg) scale(1);
+  /* color: var(--bg-secondary); */
+}
+
+
+.button-bg button:hover span {
+  transform: translateX(50px);
 }
 </style>

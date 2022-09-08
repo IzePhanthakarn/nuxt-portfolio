@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center items-center overflow-x-hidden">
+  <div class="w-full py-3 flex flex-col justify-center items-center overflow-x-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">Services</h1>
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="contact-con container mt-8 flex flex-col sm:flex-row sm:rounded-3xl">
-      <div class="w-full sm:w-8/12 text-content px-6 pt-6 font-medium">
+      <div class="w-full sm:w-8/12 text-content px-6 pt-6 font-medium text-default">
         <h1 class="text-lg">You want to have a website ?</h1>
         <h2 class="text-tiny mb-3">If this is your first project contact me and get 30% discount on your new project.
         </h2>
