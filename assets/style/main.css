@@ -98,8 +98,12 @@ body {
   color: var(--color);
   transition: all .2s;
 }
+::selection{
+  color: var(--bg);
+  background: var(--color);
+}
 .text-ndefault{
-  color: var(--color-neg);
+  color: var(--bg);
   transition: all .2s;
 }
 .text-highlight{

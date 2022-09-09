@@ -59,7 +59,8 @@
               <label class="font-medium ml-2" for="message">Message</label>
               <textarea id="message" v-model="message" required />
             </div>
-            <div class="button-bg">
+
+            <div class="send-button button-bg">
               <button type="submit">
                 <div class="i-animation">
                   <i class="fas fa-paper-plane"></i>
@@ -68,10 +69,8 @@
                   Send
                 </span>
               </button>
+
             </div>
-            <!-- <button type="submit">
-              Send email
-            </button> -->
           </form>
         </div>
       </div>
@@ -117,6 +116,7 @@ export default {
     sr.reveal(`.con-input2`, { origin: 'right', delay: 400 })
     sr.reveal(`.con-input3`, { origin: 'left', delay: 500 })
     sr.reveal(`.con-input4`, { origin: 'right', delay: 600 })
+    sr.reveal(`.send-button`, { origin: 'left', delay: 700 })
   }
 }
 </script>
@@ -155,6 +155,7 @@ textarea {
   height: 60px;
   resize: none;
 }
+
 .button-bg {
   width: 90px;
   padding: 3px 0;
