@@ -122,7 +122,7 @@ body {
   color: var(--white);
 }
 .bg-main{
-  height: calc(100vh - 112.5px);
+  height: calc(100vh - 120.5px);
   color: var(--color);
   font-size: 60px;
 }

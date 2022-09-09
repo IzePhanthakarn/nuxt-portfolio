@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .h-content {
-  height: calc(100vh - 112.5px);
+  height: calc(100vh - 120.5px);
 }
 
 .button {
