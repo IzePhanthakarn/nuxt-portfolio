@@ -1,6 +1,6 @@
 <template>
   <div class="footer py-2.5 space-y-3 flex flex-col items-center">
-    <div class="icon-follow flex justify-center space-x-6 text-3xl">
+    <div class="icon-follow flex justify-center space-x-6 text-3xl -mb-3.5">
       <div class="tooltip">
         <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
           class="fab fa-facebook-square hover-icon"></a>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="line"></div>
-    <p class="text-center">Created by <span class="text-highlight font-medium">IzePhanthakarn</span> | Copyright <i
+    <p class="text-center font-medium">Created by <span class="text-highlight font-semibold">IzePhanthakarn</span> | Copyright <i
         class="far fa-copyright"></i> 2022</p>
   </div>
 </template>

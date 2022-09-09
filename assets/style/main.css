@@ -39,6 +39,7 @@
   --timeline-icon:#FFF;
   --timeline-line: #DC143C;
   --bg: #E5E5E5;
+  --bg-neg: #272727;
   --bg-nav: #E5E5E5;
   --bg-secondary: #FFF;
   --color-shadow: rgba(0, 0, 0, 0.25);
@@ -58,11 +59,12 @@
   --timeline-icon: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --timeline-line: #cc00cc;
   --bg: #171717;
+  --bg-neg: #E5E5E5;
   --bg-nav: #000;
   --bg-secondary: #272727;
   --color-shadow: #cc00cc;
   --color-shadow-m: #cc00cc;
-  --color-shadow-w:rgba(255, 255, 255, 0.5);;
+  --color-shadow-w:rgba(255, 255, 255, 0);;
   --color-shadow-btn:rgba(255, 255, 255, 0.25);;
   --color-shadow-img:rgba(255, 255, 255, 0.1);;
 }

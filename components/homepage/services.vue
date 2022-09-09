@@ -34,7 +34,7 @@
     <div class="contact-con container mt-8 flex flex-col sm:flex-row sm:rounded-3xl">
       <div class="w-full sm:w-8/12 text-content px-6 pt-6 font-medium text-default">
         <h1 class="text-lg">You want to have a website ?</h1>
-        <h2 class="text-tiny mb-3">If this is your first project contact me and get 30% discount on your new project.
+        <h2 class="text-tiny mb-3">If this is your first project, contact me and get 30% discount on your new project.
         </h2>
         <nuxt-link to="/contacts" class="button text-white rounded-xl py-1 px-3 text-tiny">Contact me</nuxt-link>
       </div>
