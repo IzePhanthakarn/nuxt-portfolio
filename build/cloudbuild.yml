@@ -1,26 +1,40 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    entrypoint: 'bash'
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
     args:
-      - '-c'
-      - |
-        docker pull gcr.io/glassy-clock-362109/nuxt-portfolio:latest || exit 0
-  - name: gcr.io/cloud-builders/docker
-    timeout: 1200s
-    args:
-      [
-        'build',
-        '-f',
-        'Dockerfile',
-        '-t',
-        'gcr.io/glassy-clock-362109/nuxt-portfolio',
-        '--cache-from',
-        'gcr.io/glassy-clock-362109/nuxt-portfolio:latest',
-        '.',
+    [
+        "build",
+        "-f",
+        "Dockerfile",
+        "-t",
+        "gcr.io/glassy-clock-362109/nuxt-portfolio:latest",
+        ".",
       ]
-timeout: 1200s
+
+  # Push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"]
+
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "nuxt-portfolio"
+      - "--image"
+      - "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"
+      - "--region"
+      - "asia-southeast1"
+      - "--platform"
+      - "managed"
+      - "--port"
+      - "3000"
+      - "--allow-unauthenticated"
+
 images:
-  - gcr.io/glassy-clock-362109/nuxt-portfolio
+  - "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"
+timeout: 1200s
 
 # gcloud builds submit --project "glassy-clock-362109" --config=./build/cloudbuild.yml
 # gcloud beta run deploy nuxt-portfolio --region asia-southeast1 --project "glassy-clock-362109" --image gcr.io/glassy-clock-362109/nuxt-portfolio --platform managed
