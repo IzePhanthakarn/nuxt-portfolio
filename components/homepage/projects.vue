@@ -12,14 +12,18 @@
               <h1 class="text-highlight font-semibold mt-4">{{project.type}}</h1>
               <h2 class="text-base font-semibold">{{project.name}}</h2>
               <h3 class="truncated-lines mt-1">{{project.detail}}</h3>
-              <button @click="$router.push(`/projects/${project.id}`)" class="viewmore text-white rounded-lg mt-2 px-3 py-1 mr-0 ml-auto">
-                    View more
-                  </button>
+              <button @click="$router.push(`/projects/${project.id}`)"
+                class="viewmore text-white rounded-lg mt-2 px-3 py-1 mr-0 ml-auto">
+                View more
+              </button>
             </div>
           </div>
         </slide>
         <hooper-navigation slot="hooper-addons"></hooper-navigation>
       </hooper>
+      <div class="button regular__btn-bg w-36 h-11 rounded-2xl text-base font-semibold mr-0 ml-auto mt-2">
+        <nuxt-link to="/projects" class="button-inside font-semibold flex justify-center items-center">More</nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +51,7 @@ export default {
         playSpeed: 5000,
         // infiniteScroll:true,
         wheelControl: false,
-        trimWhiteSpace:true,
+        trimWhiteSpace: true,
         breakpoints: {
           640: {
             centerMode: false,
@@ -59,8 +63,8 @@ export default {
           }
         }
       },
-      projects:[
-        {id:1,type:"Website",name:"Portfolio Website",img:"/mainport.png",detail:"This website is the website you are watching now. It started making in August 2022 and update until now. It made by Nuxt.js framework."}
+      projects: [
+        { id: 1, type: "Website", name: "Portfolio Website", img: "/mainport.png", detail: "This website is the website you are watching now. It started making in August 2022 and update until now. It made by Nuxt.js framework." }
       ]
     };
   },
@@ -91,20 +95,23 @@ export default {
   background: var(--bg-secondary);
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
-img{
+
+img {
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
-.truncated-lines{
+
+.truncated-lines {
   width: 100%;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
 }
+
 /* .hooper-slide {
   height: 100%;
 } */
-button{
+button {
   background: var(--first-color);
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }

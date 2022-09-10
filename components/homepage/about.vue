@@ -25,7 +25,7 @@
             </div>
             <div class="my-6 px-2 sm:my-8 flex justify-between sm:justify-start items-center text-base font-semibold sm:space-x-10">
                 <div class="button bold__btn-bg w-36 h-11 rounded-2xl">
-                  <button class="button-inside font-semibold" @click="push('/resume')">Resume</button>
+                  <button class="button-inside font-semibold">Resume</button>
                 </div>
                 <div class="button regular__btn-bg w-36 h-11 rounded-2xl">
                   <nuxt-link to="/about" class="button-inside font-semibold flex justify-center items-center">More</nuxt-link>
@@ -85,26 +85,12 @@ export default {
   border: 3px solid var(--color-shadow-m);
   box-shadow: 4px 8px 30px rgba(0, 0, 0, 0.2);
 }
-.button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-  cursor: pointer;
-  box-shadow: 2px 2px 6px var(--color-shadow-btn);
-}
 .bold__btn-bg {
   background: var(--color-primary);
 }
 
 .bold__btn-bg:hover{
   scale: 1.05;
-}
-.button-inside{
-  width: 95%;
-  height: 85%;
-  transition: 0.3s;
-    border-radius: 12px;
 }
 .bold__btn-bg .button-inside{
   color: #FFF;
@@ -114,22 +100,6 @@ background-color: var(--bg);
 color: var(--color);
 }
 
-.regular__btn-bg {
-  background: var(--color-primary);
-}
-
-.regular__btn-bg:hover{
-  background: var(--color-primary);
-  scale: 1.05;
-}
-.regular__btn-bg .button-inside{
-  color: var(--color);
-  background-color:var(--bg);
-}
-.regular__btn-bg:hover .button-inside{
-background-color: var(--color-primary);
-color: #FFF;
-}
 @media(min-width:640px){
   .img-about img {
   width: 400px;

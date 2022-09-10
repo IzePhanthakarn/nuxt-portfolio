@@ -36,7 +36,7 @@
         <h1 class="text-lg">You want to have a website ?</h1>
         <h2 class="text-tiny mb-3">If this is your first project, contact me and get 30% discount on your new project.
         </h2>
-        <nuxt-link to="/contacts" class="button text-white rounded-xl py-1 px-3 text-tiny">Contact me</nuxt-link>
+        <nuxt-link to="/contacts" class="button-service text-white rounded-xl py-1 px-3 text-tiny">Contact me</nuxt-link>
       </div>
       <div class="img-content w-full sm:w-4/12">
         <img src="~/static/img/me/myprofile3.png" alt="" class="w-2/3 sm:w-full sm:rounded-3xl mr-0 ml-auto -mt-12 sm:mt-0">
@@ -96,7 +96,7 @@ i::before {
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
 
-.button {
+.button-service {
   background: var(--first-color);
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }

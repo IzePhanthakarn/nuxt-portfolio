@@ -43,7 +43,8 @@
             </header>
 
             <div class="skill__set">
-              <div class="flex px-6 py-4 xl:px-10 font-medium" v-for="(programming, index) in programmings" :key="`work-${index}`">
+              <div class="flex px-6 py-4 xl:px-10 font-medium" v-for="(programming, index) in programmings"
+                :key="`work-${index}`">
                 <i class="uil uil-award text-2xl xl:text-3xl text-highlight mr-1 xl:mr-4"></i>
                 <div class="lg:text-base">
                   <h2 class="skill__title-info">{{ programming.title }}</h2>
@@ -101,6 +102,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="button regular__btn-bg w-36 h-11 rounded-2xl text-base font-semibold mr-0 ml-auto mt-2">
+        <nuxt-link to="/skills" class="button-inside font-semibold flex justify-center items-center">More</nuxt-link>
       </div>
     </div>
   </div>
@@ -185,9 +189,11 @@ export default {
   content: "what I can do";
   bottom: -1px;
 }
-.head::before{
+
+.head::before {
   bottom: 11px;
 }
+
 .skills__arrow {
   transition: all .4s;
 }

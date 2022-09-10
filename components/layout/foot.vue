@@ -15,7 +15,7 @@
         <span class="tooltiptext">Github</span>
       </div>
       <div class="tooltip">
-        <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-line hover-icon"></a>
+        <a href="https://line.me/ti/p/Gkx0_u2GwJ" target="_blank" class="fab fa-line hover-icon"></a>
         <span class="tooltiptext">Line</span>
       </div>
     </div>

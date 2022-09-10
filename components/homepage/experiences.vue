@@ -4,7 +4,8 @@
       <div class="title">
         <h1 class="head mx-auto">My Experiences</h1>
       </div>
-      <div class="subheader text-default w-full -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
+      <div
+        class="subheader text-default w-full -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
         <i class="uil uil-graduation-cap text-highlight text-4xl font-bold"></i>
         <h1>Education</h1>
       </div>
@@ -12,7 +13,8 @@
         v-for="(education, index) in educations" :key="index">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
-            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ education.year }}</span>
+            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ education.year
+            }}</span>
           </div>
           <div class="timeline-info w-full">
             <h1 class="text-base xl:text-lg 2xl:text-xl font-medium">{{ education.major }}</h1>
@@ -22,7 +24,8 @@
           </div>
         </div>
       </div>
-      <div class="subheader text-default w-full mt-4 -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
+      <div
+        class="subheader text-default w-full mt-4 -py-4 rounded-3xl text-lg font-semibold tracking-wider flex items-center space-x-2 sm:space-x-4">
         <i class="uil uil-briefcase-alt text-highlight text-4xl font-bold"></i>
         <h1>Work</h1>
       </div>
@@ -30,14 +33,18 @@
         v-for="(work, index) in works" :key="`work-${index}`">
         <div class="timeline-bg mb-4 pb-0.5 px-0.5 flex flex-col sm:flex-row sm:space-x-12">
           <div class="timeline-date py-2 sm:py-0">
-            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ work.year }}</span>
+            <span class="font-semibold xl:text-base text-white pl-2 sm:pl-2 sm:pr-3 whitespace-nowrap">{{ work.year
+            }}</span>
           </div>
           <div class="timeline-info w-full">
             <h1 class="text-base xl:text-lg 2xl:text-xl font-medium">{{ work.job }}</h1>
             <h2 class="text-tiny xl:text-base 2xl:text-lg xl:font-medium -mt-1">- {{ work.location }}</h2>
-             <p class="my-1 2xl:text-base">{{ work.detail }}</p>
+            <p class="my-1 2xl:text-base">{{ work.detail }}</p>
           </div>
         </div>
+      </div>
+      <div class="button regular__btn-bg w-36 h-11 rounded-2xl text-base font-semibold mr-0 ml-auto mt-2">
+        <nuxt-link to="/experiences" class="button-inside font-semibold flex justify-center items-center">More</nuxt-link>
       </div>
     </div>
   </div>
@@ -52,7 +59,7 @@ export default {
         { id: "2", major: "Science - Math", location: "Samchukratana Phokharam school", year: "2012 - 2018", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam.", gpa: "3.13" }
       ],
       works: [
-        { id: "1", job: "Full Stack Developer", location: "AI Technovation Co.,Ltd.", year: "2022 - now", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam."}
+        { id: "1", job: "Full Stack Developer", location: "AI Technovation Co.,Ltd.", year: "2022 - now", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam." }
       ]
     }
   },
@@ -64,6 +71,7 @@ export default {
 
     sr.reveal(`.subheader`, { origin: 'top', delay: 300 })
     sr.reveal(`.pagetimeline`, { origin: 'right', delay: 400 })
+    sr.reveal(`.button`, { origin: 'right', delay: 300 })
   },
 }
 </script>
@@ -73,12 +81,15 @@ export default {
   content: "education & work";
   bottom: 3px;
 }
-.head::before{
+
+.head::before {
   bottom: 13px;
 }
-.subheader{
+
+.subheader {
   color: var(--color);
 }
+
 .timeline-bg {
   background: var(--first-color);
   border-radius: 0 22px 22px 22px;
@@ -126,11 +137,13 @@ export default {
 
 @media (min-width:640px) {
   .head::after {
-  bottom: -1px;
-}
-.head::before{
-  bottom: 12px;
-}
+    bottom: -1px;
+  }
+
+  .head::before {
+    bottom: 12px;
+  }
+
   .timeline-bg {
     background: transparent;
     border-radius: 0;
@@ -159,7 +172,8 @@ export default {
     box-shadow: 4px 4px 10px var(--color-shadow-img);
   }
 }
-@media (min-width:1280px){
+
+@media (min-width:1280px) {
   .timeline::before {
     left: 8.2rem;
   }
@@ -167,6 +181,7 @@ export default {
   .timeline::after {
     left: 8.88rem;
   }
+
   .timeline-info {
     border: 3px solid var(--timeline-line);
   }

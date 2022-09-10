@@ -6,10 +6,10 @@
         <h1>Hello, my name is</h1>
         <h2 class="-my-2 xl:-my-4 text-xl sm:text-4xl lg:text-xl xl:text-5xl font-semibold">Phanthakarn Khumphai</h2>
         <h3>And I'm <span class="text-highlight typing"></span><span class="text-highlight ml-px">|</span></h3>
-        <nuxt-link to="/about" class="text-base 2xl:text-lg button">About me</nuxt-link>
+        <nuxt-link to="/about" class="text-base 2xl:text-lg button-home">About me</nuxt-link>
       </div>
       <div
-        class="icon-follow flex justify-center space-x-6 text-3xl absolute hidden sm:block sm:space-x-0 sm:bottom-52 sm:right-10 lg:bottom-20 lg:left-20 lg:flex lg:space-x-6 lg:justify-start">
+        class="icon-follow flex justify-center space-x-6 text-3xl absolute hidden sm:block sm:space-x-0 sm:bottom-10 sm:right-10 lg:bottom-20 lg:left-20 lg:flex lg:space-x-6 lg:justify-start">
         <div class="fb-icon tooltip">
           <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
             class="fab fa-facebook-square hover-icon"></a>
@@ -24,7 +24,7 @@
           <span class="tooltiptext">Github</span>
         </div>
         <div class="line-icon tooltip">
-          <a href="https://github.com/izephanthakarn" target="_blank" class="fab fa-line hover-icon"></a>
+          <a href="https://line.me/ti/p/Gkx0_u2GwJ" target="_blank" class="fab fa-line hover-icon"></a>
           <span class="tooltiptext">Line</span>
         </div>
       </div>
@@ -129,7 +129,7 @@ export default {
 </script>
 
 <style scoped>
-.button {
+.button-home {
   cursor: pointer;
   border: none;
   outline: none;
@@ -140,7 +140,7 @@ export default {
   transition: all 0.5s;
 }
 
-.button::before {
+.button-home::before {
   content: "";
   position: absolute;
   top: 0;
@@ -153,17 +153,17 @@ export default {
   transition: all 0.5s;
 }
 
-.button:hover::before {
+.button-home:hover::before {
   width: 100%;
   border-radius: 20px;
   box-shadow: 2px 2px 6px var(--color-shadow-btn);
 }
 
-.button:hover {
+.button-home:hover {
   color: var(--white);
 }
 
-.button:active:before {
+.button-home:active:before {
   background: #b9b9b9;
 }
 
@@ -242,7 +242,7 @@ export default {
     width: 35%;
   }
 
-  .button::before {
+  .button-home::before {
     width: 4px;
   }
 }

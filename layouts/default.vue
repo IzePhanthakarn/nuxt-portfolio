@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative overflow-hidden">
     <Navbar />
 
     <!-- context menu -->
@@ -71,6 +71,10 @@
 
     <nuxt />
 
+    <button class="to-top hide hidden" id="totop" @click="toTop">
+      <i class="uil uil-angle-up text-4xl text-white"></i>
+    </button>
+
     <!-- progress scroll bar -->
     <div class="pos-bar hidden xl:block">
       <div class="bar flex font-bold text-lg 2xl:text-xl">
@@ -106,7 +110,7 @@ export default {
       let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
         height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
         scrolled = (winScroll / height) * 100;
-        // console.log(winScroll)
+      // console.log(winScroll)
       return scrolled
     }
     window.onscroll = function () {
@@ -142,8 +146,8 @@ export default {
       // if x is greater than window width - contextMenu width then set the x value
       // to window width - contextMenu window else set x to the offsetX. Similarly, to y
       x = x > winWidth - cmWidth ? winWidth - cmWidth : x;
-      y = y > nowHight - (cmHeight+115) ? nowHight - (cmHeight+115) : y;
-      
+      y = y > nowHight - (cmHeight + 115) ? nowHight - (cmHeight + 115) : y;
+
 
       contextMenu.style.left = `${x}px`
       contextMenu.style.top = `${y}px`
@@ -152,6 +156,27 @@ export default {
 
     // hide the context menu on document click
     document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+
+    const myID = document.getElementById("totop");
+
+    var myScrollFunc = function () {
+      var y = window.scrollY;
+      if (y >= 100) {
+        myID.className = "to-top show"
+      } else {
+        myID.className = "to-top hide"
+      }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+
+    if (document.readyState == "complete") {
+      alert("Your page is loaded");
+    } else {
+      window.addEventListener("load", function () {
+        alert("Your page is loaded");
+      }, false);
+    }
   },
   computed: {
     route_name() {
@@ -161,7 +186,13 @@ export default {
   methods: {
     copyURL() {
       navigator.clipboard.writeText("https://www.izephanthakarn.com");
-    }
+    },
+    toTop: function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    },
   },
 }
 </script>
@@ -235,6 +266,38 @@ hr {
   margin: 4px 8px;
 }
 
+.to-top {
+  position: fixed;
+  bottom: 30px;
+  transform: translateY(10px);
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  background: var(--first-color);
+  z-index: 50;
+  transition: all 1s;
+}
+
+.to-top i::before{
+  transform: translate(-1px,-11px);
+}
+
+.hide {
+  opacity: 0;
+  bottom: -100%;
+}
+
+.show {
+  opacity: 1;
+  bottom: 20px;
+}
+@media (min-width:640px) {
+  .to-top{
+    right: 20px;
+    transform: translateY(5px);
+  }
+}
 @media (min-width:1536px) {
   .pos-bar {
     left: -16%;

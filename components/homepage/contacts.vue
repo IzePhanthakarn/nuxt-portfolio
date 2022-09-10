@@ -39,7 +39,7 @@
 
         <!-- Contact form -->
         <div class="lg:w-full lg:mt-4">
-          <h1 class="subheader text-base font-semibold mb-4 lg:mb-1">Message me</h1>
+          <h1 class="subheader text-base font-semibold mb-1">Message me</h1>
           <form class="w-full" @submit.prevent="send">
             <div class="sm:flex sm:space-x-4">
               <div class="con-input1 sm:w-full">
