@@ -52,7 +52,6 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     '@nuxtjs/axios',
     ['nuxt-mail', {
       message: {
@@ -71,6 +70,7 @@ export default {
   
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/color-mode',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
