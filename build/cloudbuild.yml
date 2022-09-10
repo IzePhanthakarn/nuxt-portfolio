@@ -1,0 +1,26 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker pull gcr.io/glassy-clock-362109/nuxt-portfolio:latest || exit 0
+  - name: gcr.io/cloud-builders/docker
+    timeout: 1200s
+    args:
+      [
+        'build',
+        '-f',
+        'Dockerfile',
+        '-t',
+        'gcr.io/glassy-clock-362109/nuxt-portfolio',
+        '--cache-from',
+        'gcr.io/glassy-clock-362109/nuxt-portfolio:latest',
+        '.',
+      ]
+timeout: 1200s
+images:
+  - gcr.io/glassy-clock-362109/nuxt-portfolio
+
+# gcloud builds submit --project "glassy-clock-362109" --config=./build/cloudbuild.yml
+# gcloud beta run deploy nuxt-portfolio --region asia-southeast1 --project "glassy-clock-362109" --image gcr.io/glassy-clock-362109/nuxt-portfolio --platform managed
