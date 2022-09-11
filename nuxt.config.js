@@ -62,7 +62,7 @@ export default {
         port: 587,
         auth: {
           user: 'api',
-          pass: '27af6f317de17865fc28bde0f5c169d2'
+          pass: '8190d83191bcfad14b28545a265a5482'
         },
       },
     }],
