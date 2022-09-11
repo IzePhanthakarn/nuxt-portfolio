@@ -91,11 +91,38 @@ export default {
   },
   methods: {
     send() {
-      this.$mail.send({
-        from: this.email,
-        subject: this.subject,
-        text: 'Hi my name is ' + this.name +"\n"+ this.message,
-      })
+      const { MailtrapClient } = require("mailtrap");
+
+      const TOKEN = "8190d83191bcfad14b28545a265a5482";
+      const ENDPOINT = "https://send.api.mailtrap.io/";
+
+      const client = new MailtrapClient({ endpoint: ENDPOINT, token: TOKEN });
+
+      const sender = {
+        email: "mailtrap@izephanthakarn.dev",
+        name: "Mailtrap Test",
+      };
+      const recipients = [
+        {
+          email: "izephanthakarn@hotmail.com",
+        }
+      ];
+
+      client
+        .send({
+          from: sender,
+          to: recipients,
+          subject: this.subject,
+          text: this.message,
+          category: "Integration Test",
+        })
+        .then(console.log, console.error);
+
+      // this.$mail.send({
+      //   from: this.email,
+      //   subject: this.subject,
+      //   text: 'Hi my name is ' + this.name + "\n" + this.message,
+      // })
       this.name = ""
       this.email = ""
       this.subject = ""
