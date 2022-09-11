@@ -28,13 +28,14 @@
           <span class="tooltiptext">Line</span>
         </div>
       </div>
-      <div class="img-content mt-20 text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
-        <div class="text-highlight icon">
+
+      <div class="img-content mt-20 text-3xl sm:text-5xl 2xl:text-7xl relative sm:mx-auto lg:mx-0">
+        <div class="text-highlight icon top-6 sm:top-0">
           <div class="icon-move">
             <i class="uil-award"></i>
           </div>
         </div>
-        <div class="text-highlight icon2 -top-16 right-48">
+        <div class="text-highlight icon2 -top-4 sm:-top-16 right-48">
           <i class="uil-brain"></i>
         </div>
         <div class="text-highlight icon right-0">
@@ -168,7 +169,8 @@ export default {
 }
 
 .img-content {
-  width: 350px;
+  width: 300px;
+  margin: 50px auto 0;
 }
 
 .blob {
@@ -230,7 +232,11 @@ export default {
     transform: translateY(10px);
   }
 }
-
+@media (min-width:400px){
+  .img-content {
+    width: 350px;
+  }
+}
 @media (min-width:640px) {
   .img-content {
     width: 500px;

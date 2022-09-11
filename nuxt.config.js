@@ -58,11 +58,11 @@ export default {
         to: 'izephanthakarn@hotmail.com',
       },
       smtp: {
-        host: 'smtp.mailtrap.io',
-        port: 2525,
+        host: 'send.smtp.mailtrap.io',
+        port: 587,
         auth: {
-          user: '9216fd2614d73c',
-          pass: '12ab1b869877af'
+          user: 'api',
+          pass: '27af6f317de17865fc28bde0f5c169d2'
         },
       },
     }],
