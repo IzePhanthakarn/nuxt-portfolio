@@ -10,7 +10,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Ize Phanthakarn',
+    title: "Phanthakarn's Portfolio",
     htmlAttrs: {
       lang: 'en',
     },
