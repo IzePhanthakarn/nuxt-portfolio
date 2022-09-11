@@ -21,7 +21,9 @@ module.exports = {
       '5xl': '60px',
       '6xl': '72px',
       '7xl': '84px',
-      '8xl': '90px'
+      '8xl': '90px',
+      '9xl': '110px',
+      '10xl': '160px'
     },
     extend: {
       ringWidth: {
