@@ -7,13 +7,13 @@ steps:
         "-f",
         "Dockerfile",
         "-t",
-        "gcr.io/glassy-clock-362109/nuxt-portfolio:latest",
+        "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest",
         ".",
       ]
 
   # Push the container image to Container Registry
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"]
+    args: ["push", "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"]
 
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -23,7 +23,7 @@ steps:
       - "deploy"
       - "nuxt-portfolio"
       - "--image"
-      - "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"
+      - "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"
       - "--region"
       - "asia-southeast1"
       - "--platform"
@@ -33,8 +33,8 @@ steps:
       - "--allow-unauthenticated"
 
 images:
-  - "gcr.io/glassy-clock-362109/nuxt-portfolio:latest"
+  - "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"
 timeout: 1200s
 
-# gcloud builds submit --project "glassy-clock-362109" --config=./build/cloudbuild.yml
-# gcloud beta run deploy nuxt-portfolio --region asia-southeast1 --project "glassy-clock-362109" --image gcr.io/glassy-clock-362109/nuxt-portfolio --platform managed
+# gcloud builds submit --project "phanthakarns-portfolio-362210" --config=./build/cloudbuild.yml
+# gcloud beta run deploy nuxt-portfolio --region asia-southeast1 --project "phanthakarns-portfolio-362210" --image gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio --platform managed
