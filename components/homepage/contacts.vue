@@ -79,6 +79,7 @@
 </template>
 
 <script>
+import 'mailtrap'
 export default {
   data() {
     return {
@@ -112,8 +113,8 @@ export default {
         .send({
           from: sender,
           to: recipients,
-          subject: this.subject,
-          text: this.message,
+          subject: "You are awesome!",
+          text: "Congrats for sending test email with Mailtrap!",
           category: "Integration Test",
         })
         .then(console.log, console.error);
