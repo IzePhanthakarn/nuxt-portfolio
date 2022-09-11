@@ -77,7 +77,7 @@
 
     <!-- progress scroll bar -->
     <div class="pos-bar hidden xl:block">
-      <div class="bar flex font-bold text-lg 2xl:text-xl">
+      <div class="bar flex font-bold text-lg">
         <div v-for="(t,index) in textShow" :key="index">
           <p v-if="t == ' '">&nbsp</p>
           <p v-else-if="index < numShow" class="text-highlight">
@@ -300,7 +300,13 @@ hr {
 }
 @media (min-width:1536px) {
   .pos-bar {
-    left: -16%;
+    display: none;
+  }
+}
+@media (min-width:1900px) {
+  .pos-bar {
+    left: -11%;
+    display: block;
   }
 }
 </style>

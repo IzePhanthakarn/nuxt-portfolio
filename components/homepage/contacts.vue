@@ -93,8 +93,8 @@ export default {
     send() {
       this.$mail.send({
         from: this.email,
-        subject: 'Contact form message',
-        text: 'Hi my name is' + this.name + this.message,
+        subject: this.subject,
+        text: 'Hi my name is ' + this.name +"\n"+ this.message,
       })
       this.name = ""
       this.email = ""
