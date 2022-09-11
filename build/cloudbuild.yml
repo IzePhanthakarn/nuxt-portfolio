@@ -1,40 +1,26 @@
 steps:
-  # Build the container image
-  - name: "gcr.io/cloud-builders/docker"
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
     args:
-    [
-        "build",
-        "-f",
-        "Dockerfile",
-        "-t",
-        "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest",
-        ".",
+      - '-c'
+      - |
+        docker pull gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest || exit 0
+  - name: gcr.io/cloud-builders/docker
+    timeout: 1200s
+    args:
+      [
+        'build',
+        '-f',
+        'Dockerfile',
+        '-t',
+        'gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio',
+        '--cache-from',
+        'gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest',
+        '.',
       ]
-
-  # Push the container image to Container Registry
-  - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"]
-
-  # Deploy container image to Cloud Run
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: gcloud
-    args:
-      - "run"
-      - "deploy"
-      - "nuxt-portfolio"
-      - "--image"
-      - "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"
-      - "--region"
-      - "asia-southeast1"
-      - "--platform"
-      - "managed"
-      - "--port"
-      - "3000"
-      - "--allow-unauthenticated"
-
-images:
-  - "gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio:latest"
 timeout: 1200s
-
+images:
+  - gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio
+  
 # gcloud builds submit --project "phanthakarns-portfolio-362210" --config=./build/cloudbuild.yml
 # gcloud beta run deploy nuxt-portfolio --region asia-southeast1 --project "phanthakarns-portfolio-362210" --image gcr.io/phanthakarns-portfolio-362210/nuxt-portfolio --platform managed
