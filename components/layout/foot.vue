@@ -4,7 +4,7 @@
       <div class="tooltip">
         <a href="https://www.facebook.com/ize.phanthakarn.5/" target="_blank"
           class="fab fa-facebook-square hover-icon"></a>
-        <span class="tooltiptext">Facebook</span>
+          <span class="tooltiptext">Facebook</span>
       </div>
       <div class="tooltip">
         <a href="https://www.instagram.com/jjaoizee/" target="_blank" class="fab fa-instagram-square hover-icon"></a>
@@ -20,8 +20,8 @@
       </div>
     </div>
     <div class="line"></div>
-    <p class="text-center font-medium">Created by <span class="text-highlight font-semibold">IzePhanthakarn</span> |
-      Copyright <i class="far fa-copyright"></i> 2022</p>
+    <p class="text-center font-medium">Created by <span class="text-highlight font-semibold">IzePhanthakarn</span> | Copyright <i
+        class="far fa-copyright"></i> 2022</p>
   </div>
 </template>
 
