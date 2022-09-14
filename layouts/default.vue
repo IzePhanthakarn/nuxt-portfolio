@@ -94,6 +94,71 @@
 
       <!-- Process bar -->
       <div class="infinity-right w-full absolute bottom-0"></div>
+      <div class="wrapper w-56 rounded-xl text-base font-medium z-50">
+        <div class="content">
+          <ul class="menu py-1.5">
+            <li class="goto item flex justify-between relative">
+              <div>
+                <i class="uil uil-share"></i>
+                <span>Go To</span>
+              </div>
+              <i class="uil uil-angle-right-b"></i>
+              <ul class="goto-menu py-1 rounded-lg">
+                <nuxt-link to="/" class="item" :class="{ 'hidden-context': route_name == 'index' }">
+                  <i class="uil uil-estate"></i>
+                  <span>Home</span>
+                </nuxt-link>
+                <nuxt-link to="/about" class="item" :class="{ 'hidden-context': route_name == 'about' }">
+                  <i class="uil uil-user"></i>
+                  <span>About</span>
+                </nuxt-link>
+                <nuxt-link to="/experiences" class="item" :class="{ 'hidden-context': route_name == 'experiences' }">
+                  <i class="uil uil-file-alt"></i>
+                  <span>Experiences</span>
+                </nuxt-link>
+                <nuxt-link to="/skills" class="item" :class="{ 'hidden-context': route_name == 'skills' }">
+                  <i class="uil uil-briefcase-alt"></i>
+                  <span>Skills</span>
+                </nuxt-link>
+                <nuxt-link to="/projects" class="item" :class="{ 'hidden-context': route_name == 'projects' }">
+                  <i class="uil uil-scenery"></i>
+                  <span>Projects</span>
+                </nuxt-link>
+                <nuxt-link to="/contacts" class="item" :class="{ 'hidden-context': route_name == 'contacts' }">
+                  <i class="uil uil-message"></i>
+                  <span>Contacts</span>
+                </nuxt-link>
+              </ul>
+            </li>
+            <hr class="my-1">
+            <li class="item" @click="$router.go(-1)">
+              <i class="uil uil-arrow-circle-left"></i>
+              <span>Back</span>
+            </li>
+            <li class="item" @click="$router.go(1)">
+              <i class="uil uil-arrow-circle-right"></i>
+              <span>Forward</span>
+            </li>
+            <li class="item" @click="$router.go(0)">
+              <i class="uil uil-redo"></i>
+              <span>Refresh</span>
+            </li>
+            <hr class="my-1">
+            <li class="item" @click="copyURL">
+              <i class="uil uil-link-alt"></i>
+              <span>Get Link</span>
+            </li>
+            <li class="item" @click="$colorMode.preference = 'light'" v-show="$colorMode.value === 'dark'">
+              <i class="uil uil-brightness-half"></i>
+              <span>Light Mode</span>
+            </li>
+            <li class="item" @click="$colorMode.preference = 'dark'" v-show="$colorMode.value === 'light'">
+              <i class="uil uil-brightness-half"></i>
+              <span>Dark Mode</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Main -->
@@ -102,7 +167,7 @@
       <Navbar />
 
       <!-- context menu -->
-      <div class="wrapper w-56 rounded-xl text-base font-medium z-50">
+      <div class="count-wrapper w-56 rounded-xl text-base font-medium">
         <div class="content">
           <ul class="menu py-1.5">
             <li class="goto item flex justify-between relative">
@@ -448,6 +513,14 @@ export default {
 }
 
 .wrapper {
+  background: var(--color);
+  color: var(--color-neg);
+  box-shadow: 2px 2px 6px var(--color-shadow-w);
+  visibility: hidden;
+  position: absolute;
+}
+
+.count-wrapper{
   background: var(--color);
   color: var(--color-neg);
   box-shadow: 2px 2px 6px var(--color-shadow-w);
