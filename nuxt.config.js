@@ -24,11 +24,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel:'stylesheet', href:'https://unicons.iconscout.com/release/v4.0.0/css/line.css'},
       { rel:'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'},
-      // { rel:'stylesheet', href:'assets/style/iconscount-line.css'}
+      {rel:'icon',href:'logo.png'}
     ],
-    // css:[
-    //   '~/style/iconscount-line.css'
-    // ],
     script: [
       { src: 'js/three.min.js' },
       { src: 'js/p5.min.js' },

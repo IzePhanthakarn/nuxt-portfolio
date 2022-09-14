@@ -8,6 +8,7 @@
         <h3>And I'm <span class="text-highlight typing"></span><span class="text-highlight ml-px">|</span></h3>
         <nuxt-link to="/about" class="text-base 2xl:text-lg button-home">About me</nuxt-link>
       </div>
+
       <div
         class="icon-follow flex justify-center space-x-6 text-3xl absolute hidden sm:block sm:space-x-0 sm:bottom-10 sm:right-10 lg:bottom-20 lg:left-20 lg:flex lg:space-x-6 lg:justify-start">
         <div class="fb-icon tooltip">
@@ -50,7 +51,7 @@
         <div class="text-highlight icon2 bottom-0 right-0">
           <i class="uil-snowflake"></i>
         </div>
-        <img src="~/static/img/home/Profile.png" alt="" class="absolute w-9/12 z-20 ml-12 mt-6 icon2">
+        <img src="~/static/img/me/me.png" alt="" class="absolute w-9/12 z-20 ml-12 mt-6 icon2">
         <img src="~/static/img/home/blob.png" alt="" class="blob" v-show="$colorMode.value === 'light'">
         <img src="~/static/img/home/blob-dark.png" alt="" class="blob" v-show="$colorMode.value === 'dark'">
       </div>
