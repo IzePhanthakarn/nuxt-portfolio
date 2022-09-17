@@ -44,7 +44,7 @@
   --bg-secondary: #FFF;
   --color-shadow: rgba(0, 0, 0, 0.25);
   --color-shadow-m: #DC143C;
-  --color-shadow-w: rgba(0, 0, 0, 0.5);
+  --color-shadow-w: rgba(0, 0, 0, 0.25);
   --color-shadow-btn: rgba(0, 0, 0, 0.25);
   --color-shadow-img: rgba(0, 0, 0, 0.15);
 }
@@ -54,7 +54,6 @@
   --color-neg: #000;
   --color-logo: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --first-color: linear-gradient(45deg, #cc00cc, #33ccff);
-  ;
   --color-primary: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);
   --color-border: #FFF;
   --timeline-icon: -webkit-linear-gradient(45deg, #cc00cc, #33ccff 132%);

@@ -287,8 +287,9 @@ textarea {
 .button-bg button:hover span {
   transform: translateX(50px);
 }
-@media (min-width:1280px){
-  .modal{
+
+@media (min-width:1280px) {
+  .modal {
     border: 3px solid var(--timeline-line);
   }
 }

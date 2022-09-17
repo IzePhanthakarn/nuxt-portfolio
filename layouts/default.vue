@@ -92,8 +92,7 @@
         </div>
       </div>
 
-      <!-- Process bar -->
-      <div class="infinity-right w-full absolute bottom-0"></div>
+      <!-- Context menu -->
       <div class="wrapper w-56 rounded-xl text-base font-medium z-50">
         <div class="content">
           <ul class="menu py-1.5">
@@ -167,7 +166,7 @@
       <Navbar />
 
       <!-- context menu -->
-      <div class="count-wrapper w-56 rounded-xl text-base font-medium">
+      <div class="wrapper w-56 rounded-xl text-base font-medium z-60">
         <div class="content">
           <ul class="menu py-1.5">
             <li class="goto item flex justify-between relative">
@@ -276,7 +275,7 @@ export default {
       isCount: false,
       countDate: 1,
       countMonth: 0,
-      countYear: 2023
+      countYear: 2022
     }
   },
 
@@ -378,7 +377,7 @@ export default {
   },
   methods: {
     copyURL() {
-      navigator.clipboard.writeText("https://www.izephanthakarn.com");
+      navigator.clipboard.writeText("https://www.izephanthakarn.dev");
     },
     toTop: function () {
       window.scrollTo({
@@ -425,6 +424,9 @@ export default {
   height: 80px;
 }
 
+.z-60{
+  z-index: 60;
+}
 .bg-counter {
   z-index: 60;
   background-repeat: no-repeat;
@@ -457,16 +459,6 @@ export default {
 .img-content {
   width: 300px;
   margin: 0px auto 0;
-}
-
-.infinity-right {
-  height: 20px;
-  background:
-    repeating-linear-gradient(135deg, var(--color) 0 20px, transparent 0 30px) right bottom,
-    repeating-linear-gradient(45deg, var(--color) 0 20px, transparent 0 30px) right top;
-  background-size: 200% 50%;
-  background-repeat: no-repeat;
-  animation: iright 8s infinite linear;
 }
 
 .blob {
@@ -513,14 +505,6 @@ export default {
 }
 
 .wrapper {
-  background: var(--color);
-  color: var(--color-neg);
-  box-shadow: 2px 2px 6px var(--color-shadow-w);
-  visibility: hidden;
-  position: absolute;
-}
-
-.count-wrapper{
   background: var(--color);
   color: var(--color-neg);
   box-shadow: 2px 2px 6px var(--color-shadow-w);
@@ -653,10 +637,6 @@ hr {
   .bg-counter-dark {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='820' height='1180' preserveAspectRatio='none' viewBox='0 0 820 1180'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1291%26quot%3b)' fill='none'%3e%3crect width='820' height='1180' x='0' y='0' fill='rgba(23%2c 23%2c 23%2c 1)'%3e%3c/rect%3e%3cpath d='M103 1180L1283 0L1440.5 0L260.5 1180z' fill='url(%23SvgjsLinearGradient1292)'%3e%3c/path%3e%3cpath d='M767 1180L-413 0L-866 0L314 1180z' fill='url(%23SvgjsLinearGradient1293)'%3e%3c/path%3e%3cpath d='M334.7371279828742 1180L820 694.7371279828742L820 1180z' fill='url(%23SvgjsLinearGradient1292)'%3e%3c/path%3e%3cpath d='M0 1180L485.2628720171258 1180L 0 694.7371279828742z' fill='url(%23SvgjsLinearGradient1293)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1291'%3e%3crect width='820' height='1180' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1292'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1293'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   }
-
-  .infinity-right {
-    animation: iright 16s infinite linear;
-  }
 }
 
 @media (min-width:1024px) {
@@ -672,10 +652,6 @@ hr {
   .bg-counter-dark {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='900' preserveAspectRatio='none' viewBox='0 0 1440 900'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1096%26quot%3b)' fill='none'%3e%3crect width='1440' height='900' x='0' y='0' fill='rgba(23%2c 23%2c 23%2c 1)'%3e%3c/rect%3e%3cpath d='M49 900L949 0L1345 0L445 900z' fill='url(%23SvgjsLinearGradient1097)'%3e%3c/path%3e%3cpath d='M484.20000000000005 900L1384.2 0L1633.2 0L733.2 900z' fill='url(%23SvgjsLinearGradient1097)'%3e%3c/path%3e%3cpath d='M1401 900L501 0L198 0L1098 900z' fill='url(%23SvgjsLinearGradient1098)'%3e%3c/path%3e%3cpath d='M962.8 900L62.799999999999955 0L-366.20000000000005 0L533.8 900z' fill='url(%23SvgjsLinearGradient1098)'%3e%3c/path%3e%3cpath d='M820.3913755523761 900L1440 280.3913755523761L1440 900z' fill='url(%23SvgjsLinearGradient1097)'%3e%3c/path%3e%3cpath d='M0 900L619.6086244476239 900L 0 280.3913755523761z' fill='url(%23SvgjsLinearGradient1098)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1096'%3e%3crect width='1440' height='900' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1097'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1098'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   }
-
-  .infinity-right {
-    animation: iright 32s infinite linear;
-  }
 }
 
 @media (min-width:1536px) {
@@ -689,10 +665,6 @@ hr {
 
   .bg-counter-dark {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1150%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(23%2c 23%2c 23%2c 1)'%3e%3c/rect%3e%3cpath d='M44 1080L1124 0L2042 0L962 1080z' fill='url(%23SvgjsLinearGradient1151)'%3e%3c/path%3e%3cpath d='M751.6 1080L1831.6 0L2343.1 0L1263.1 1080z' fill='url(%23SvgjsLinearGradient1151)'%3e%3c/path%3e%3cpath d='M1808 1080L728 0L371 0L1451 1080z' fill='url(%23SvgjsLinearGradient1152)'%3e%3c/path%3e%3cpath d='M1196.4 1080L116.40000000000009 0L-65.09999999999991 0L1014.9000000000001 1080z' fill='url(%23SvgjsLinearGradient1152)'%3e%3c/path%3e%3cpath d='M1104.83315251273 1080L1920 264.83315251272995L1920 1080z' fill='url(%23SvgjsLinearGradient1151)'%3e%3c/path%3e%3cpath d='M0 1080L815.16684748727 1080L 0 264.83315251272995z' fill='url(%23SvgjsLinearGradient1152)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1150'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1151'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1152'%3e%3cstop stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(39%2c 39%2c 39%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-  }
-
-  .infinity-right {
-    animation: iright 60s infinite linear;
   }
 
   .pos-bar {

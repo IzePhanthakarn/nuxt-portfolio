@@ -50,19 +50,6 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/axios',
-    // ['nuxt-mail', {
-    //   message: {
-    //     to: 'izephanthakarn@hotmail.com',
-    //   },
-    //   smtp: {
-    //     host: 'send.smtp.mailtrap.io',
-    //     port: 2525,
-    //     auth: {
-    //       user: 'api',
-    //       pass: '8190d83191bcfad14b28545a265a5482'
-    //     },
-    //   },
-    // }],
   ],
   
   // Modules: https://go.nuxtjs.dev/config-modules

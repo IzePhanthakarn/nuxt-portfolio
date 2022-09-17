@@ -39,7 +39,6 @@
 </template>
 
 <script>
-// onclick="window.open ('assets/pdf/Resume_Phanthakarn.pdf' );
 export default {
   data() {
     return {
