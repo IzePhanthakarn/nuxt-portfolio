@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-3 flex justify-center items-center overflow-hidden">
+  <div class="w-full py-3 lg:py-8 flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">My Experiences</h1>
@@ -44,7 +44,8 @@
         </div>
       </div>
       <div class="button regular__btn-bg w-36 h-11 rounded-2xl text-base font-semibold mr-0 ml-auto mt-2">
-        <nuxt-link to="/experiences" class="button-inside font-semibold flex justify-center items-center">More</nuxt-link>
+        <nuxt-link to="/experiences" class="button-inside font-semibold flex justify-center items-center">More
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -55,24 +56,15 @@ export default {
   data() {
     return {
       educations: [
-        { id: "1", major: "Electricals engineering", location: "Silpakorn University", year: "2019 - 2023", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam.", gpa: "3.33" },
-        { id: "2", major: "Science - Math", location: "Samchukratana Phokharam school", year: "2012 - 2018", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam.", gpa: "3.13" }
+        { id: "1", major: "Electricals engineering", location: "Silpakorn University", year: "2019 - 2023", detail: "After graduating from high school, I went on to study electronics and computer systems engineering at Silpakorn University in Nakhon Pathom. I excelled in computer and programming subjects. But the weak point is the subject about electricity.", gpa: "3.33" },
+        { id: "2", major: "Science - Math", location: "Samchukratana Phokharam school", year: "2012 - 2018", detail: "I studied at Samchuk Rattanaphokaram School near my house in Sam Chuk, Suphanburi. I excelled in Chemistry, English and very fond of computers. The weak point is math and physics. and graduated from there with a 3.13 GPA.", gpa: "3.13" }
       ],
       works: [
         { id: "1", job: "Full Stack Developer", location: "AI Technovation Co.,Ltd.", year: "2022 - now", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur totam voluptate dolores quisquam doloremque cumque quod eveniet ullam autem animi minus laborum delectus molestiae temporibus, distinctio vitae officia? Ullam." }
       ]
     }
   },
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
 
-    sr.reveal(`.subheader`, { origin: 'top', delay: 300 })
-    sr.reveal(`.pagetimeline`, { origin: 'right', delay: 400 })
-    sr.reveal(`.button`, { origin: 'right', delay: 300 })
-  },
 }
 </script>
 

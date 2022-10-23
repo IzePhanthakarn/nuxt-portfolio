@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-3 flex flex-col justify-center items-center overflow-x-hidden">
+  <div class="w-full py-3 lg:py-8 flex flex-col justify-center items-center overflow-x-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">Services</h1>
@@ -47,17 +47,6 @@
 
 <script>
 export default {
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.service1`, { origin: 'left', delay: 300 })
-    sr.reveal(`.service2`, { origin: 'left', delay: 400 })
-    sr.reveal(`.service3`, { origin: 'left', delay: 500 })
-    sr.reveal(`.contact-con`, { origin: 'right', delay: 600 })
-  }
 }
 </script>
 

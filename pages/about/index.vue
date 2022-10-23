@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full pt-20 flex flex-col justify-center items-center overflow-x-hidden">
+    <div class="w-full pt-32 flex flex-col justify-center items-center overflow-x-hidden">
         <div class="container px-5 flex flex-col justify-center items-center">
-            <div class="title mt-0 sm:mt-4">
+            <div class="title">
                 <h1 class="head mx-auto">About me</h1>
             </div>
             <div class="w-full lg:mt-12 2xl:mt-20 flex flex-col lg:flex-row justify-center items-center">
@@ -133,12 +133,13 @@ export default {
                 { number: "06+", line1: "Completed", line2: "projects" },
                 { number: "05+", line1: "People", line2: "work with" }
             ],
+            test:'sasasasasaa',
             personals: [
                 { title: "Name", detail: "Phanthakarn Khumphai" },
                 { title: "Nickname", detail: "Ize" },
                 { title: "Gender", detail: "Male" },
                 { title: "Birthday", detail: "17 June 2001" },
-                { title: "Age", detail: "21 years old" },
+                { title: "Age", detail: this.getAge(55) },
                 { title: "Education", detail: "Electrical Engineering" },
                 { title: "Occupation", detail: "Developer" },
                 { title: "Blood type", detail: "AB" },
@@ -182,6 +183,9 @@ export default {
         }
     },
     methods: {
+        getAge(age){
+            return age
+        },
         responsive() {
             this.numPic = 6
             if (this.screen > 640 && this.screen < 1280) {
@@ -210,17 +214,6 @@ export default {
             cursorChar: '',
             loop: true
         });
-
-        const sr = ScrollReveal({
-            distance: '100px',
-            duration: 1500,
-        })
-
-        sr.reveal(`.title`, { origin: 'top', delay: 200 })
-        sr.reveal(`.img-about`, { origin: 'left', delay: 300 })
-        sr.reveal(`.content-about`, { origin: 'right', delay: 400 })
-        sr.reveal(`.tabs__head`, { origin: 'left', delay: 400 })
-        sr.reveal(`.tabs__body`, { origin: 'right', delay: 400 })
     },
 
 }

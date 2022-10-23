@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-hidden">
+  <div class="w-full flex justify-center items-center overflow-hidden py-0 lg:py-8">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">Contact me</h1>
@@ -151,23 +151,6 @@ export default {
       this.modal = true
     }
   },
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.con-detail`, { origin: 'left', delay: 300 })
-    sr.reveal(`.con-email`, { origin: 'left', delay: 400 })
-    sr.reveal(`.con-phone`, { origin: 'left', delay: 500 })
-    sr.reveal(`.con-linked`, { origin: 'left', delay: 600 })
-    sr.reveal(`.con-input1`, { origin: 'left', delay: 300 })
-    sr.reveal(`.con-input2`, { origin: 'right', delay: 400 })
-    sr.reveal(`.con-input3`, { origin: 'left', delay: 500 })
-    sr.reveal(`.con-input4`, { origin: 'right', delay: 600 })
-    sr.reveal(`.send-button`, { origin: 'left', delay: 700 })
-
-  }
 }
 </script>
 

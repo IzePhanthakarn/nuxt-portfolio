@@ -1,12 +1,19 @@
 <template>
   <div>
     <Home />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <About />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Experiences />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Skills />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Projects />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Services />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Testimonials />
+    <div class="container h-0.5 hightlight mx-auto hidden lg:block"></div>
     <Contacts />
   </div>
 </template>
@@ -25,3 +32,9 @@ export default {
   components: { Home, About, Experiences, Skills, Projects, Services, Testimonials, Contacts}
 }
 </script>
+
+<style scoped>
+  .hightlight{
+    background: var(--first-color);
+  }
+</style>

@@ -26,15 +26,6 @@ export default {
       default: () => { },
     },
   },
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '50px',
-      duration: 2000,
-    })
-
-    sr.reveal(`.data`, { origin: 'top', delay: 500 })
-    sr.reveal(`.img`, { origin: 'bottom', delay: 600 })
-  },
 }
 </script>
 

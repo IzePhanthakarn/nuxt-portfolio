@@ -27,11 +27,7 @@ export default {
       {rel:'icon',href:'logo.png'}
     ],
     script: [
-      { src: 'js/three.min.js' },
-      { src: 'js/p5.min.js' },
-      { src: 'js/vanta.waves.min.js' },
       { src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12' },
-      { src: 'js/scrollreveal.min.js'}
     ],
   },
   // Global CSS: https://go.nuxtjs.dev/config-css

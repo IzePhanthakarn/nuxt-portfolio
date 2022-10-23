@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center items-center overflow-x-hidden">
+  <div class="w-full flex justify-center items-center overflow-x-hidden py-0 lg:py-8">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">About me</h1>
@@ -57,14 +57,6 @@ export default {
       cursorChar: '',
       loop: true
     });
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.title`, { origin: 'top', delay: 200 })
-    sr.reveal(`.img-about`, { origin: 'left', delay: 300 })
-    sr.reveal(`.content-about`, { origin: 'right', delay: 400 })
   },
 }
 </script>

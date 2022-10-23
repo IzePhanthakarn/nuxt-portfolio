@@ -114,18 +114,6 @@ export default {
     //   effectHome.setOptions({ color: 0x9 });
     // }
 
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.text-content`, { origin: 'left', delay: 100 })
-    sr.reveal(`.img-content`, { origin: 'right', delay: 200 })
-    sr.reveal(`.fb-icon`, { origin: 'right', delay: 200 })
-    sr.reveal(`.pos-bar`, { origin: 'right', delay: 200 })
-    sr.reveal(`.ig-icon`, { origin: 'right', delay: 300 })
-    sr.reveal(`.gh-icon`, { origin: 'right', delay: 400 })
-    sr.reveal(`.line-icon`, { origin: 'right', delay: 500 })
   }
 }
 </script>

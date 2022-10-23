@@ -159,25 +159,10 @@ export default {
 
     function scrollHeader() {
       // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-      if (this.scrollY >= 80) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
+      if (this.scrollY >= 20) nav.classList.add('scroll-navbar'); else nav.classList.remove('scroll-navbar')
     }
     window.addEventListener('scroll', scrollHeader)
 
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.logo-nav`, { origin: 'left', delay: 100 })
-    sr.reveal(`.home`, { origin: 'left', delay: 300 })
-    sr.reveal(`.about`, { origin: 'left', delay: 400 })
-    sr.reveal(`.experience`, { origin: 'left', delay: 500 })
-    sr.reveal(`.skills`, { origin: 'left', delay: 600 })
-    sr.reveal(`.projects`, { origin: 'left', delay: 700 })
-    sr.reveal(`.contacts`, { origin: 'left', delay: 800 })
-    sr.reveal(`.mode`, { origin: 'top', delay: 300 })
-    sr.reveal(`.assets`, { origin: 'top', delay: 400 })
-    sr.reveal(`.apps`, { origin: 'top', delay: 500 })
   },
   computed: {
     route_name() {

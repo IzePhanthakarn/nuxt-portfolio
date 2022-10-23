@@ -27,14 +27,6 @@
 
 <script>
 export default {
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '50px',
-      duration: 2000,
-    })
-
-    sr.reveal(`.footer`, { origin: 'top', delay: 800 })
-  },
 }
 </script>
 

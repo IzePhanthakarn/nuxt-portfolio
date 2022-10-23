@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-3 flex justify-center items-center overflow-x-hidden">
+  <div class="w-full py-3 lg:py-8 flex justify-center items-center overflow-x-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">My Skills</h1>
@@ -172,14 +172,6 @@ export default {
         skill.classList.add('rotate');
       }
     }
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.leftcard`, { origin: 'left', delay: 300 })
-    sr.reveal(`.rightcard`, { origin: 'right', delay: 400 })
-
   },
 }
 </script>

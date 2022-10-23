@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-3 flex justify-center items-center overflow-hidden">
+  <div class="w-full py-3 lg:py-8 flex justify-center items-center overflow-hidden">
     <div class="container px-5 flex flex-col justify-center items-center">
       <div class="title">
         <h1 class="head mx-auto">My Projects</h1>
@@ -67,16 +67,6 @@ export default {
         { id: 1, type: "Website", name: "Portfolio Website", img: "/mainport.png", detail: "This website is the website you are watching now. It started making in August 2022 and update until now. It made by Nuxt.js framework." }
       ]
     };
-  },
-  mounted() {
-    const sr = ScrollReveal({
-      distance: '100px',
-      duration: 1500,
-    })
-
-    sr.reveal(`.hooperr`, { origin: 'top', delay: 300 })
-    sr.reveal(`.slides`, { origin: 'left', delay: 500 })
-
   },
 }
 </script>
